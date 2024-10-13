@@ -1,0 +1,418 @@
+[
+  {
+    "name": "OPPO F21s Pro 5G",
+    "price": 245.67,
+    "description": "OPPO F21s Pro 5G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
+    "ratings": 4.5,
+    "count": 340,
+    "images": [
+      {
+        "image": "/images/products/1.jpg"
+      },
+      {
+        "image": "/images/products/1.jpg"
+      }
+    ],
+    "category": "Mobile Phones",
+    "seller": "Amazon",
+    "stock": 5,
+    "offers":20
+  },
+  {
+    "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
+    "price": 150.32,
+    "description": "Minix watches are exclusively designed to fulfill the advanced tech needs of today’s generation.",
+    "ratings": 3.5,
+    "count": 240,
+    "images": [
+      {
+        "image": "/images/products/2.jpg"
+      }
+    ],
+    "category": "Accessories",
+    "seller": "Flipkart",
+    "stock": 9,
+    "offers":30
+
+  },
+  {
+    "name": "Dell Inspiron 3511 Laptop",
+    "price": 440.57,
+    "description": "Dell Inspiron 3511 11th Generation Intel Core i5-1135G7 Processor (8MB Cache, up to 4.2 GHz);Operating System: Windows 10 Home Single Language, English",
+    "ratings": 2,
+    "count": 220,
+    "images": [
+      {
+        "image": "/images/products/3.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Ebay",
+    "stock": 9,
+    "offers":25
+  },
+  {
+    "name": "Lenovo IdeaPad Slim 3 Laptop",
+    "price": 250.45,
+    "description": "Lenovo IdeaPad Slim 311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
+    "ratings": 4,
+    "count": 200,
+    "images": [
+      {
+        "image": "/images/products/6.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Ebay",
+    "stock": 9,
+    "offers":35
+  },
+  {
+    "name": "ASUS VivoBook 15 Laptop",
+    "price": 767.32,
+    "description": "ASUS VivoBook 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
+    "ratings": 5,
+    "count": 100,
+    "images": [
+      {
+        "image": "/images/products/7.jpg"
+      }
+    ],
+    "category": "Laptops",
+    "seller": "Ebay",
+    "stock": 9,
+    "offers":40
+  },
+  {
+    "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
+    "price": 15.46,
+    "description": "Gigantic 60 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
+    "ratings": 5,
+    "count": 150,
+    "images": [
+      {
+        "image": "/images/products/4.jpg"
+      }
+    ],
+    "category": "Headphones",
+    "seller": "Amazon",
+    "stock": 4,
+    "offers":60
+  },
+  {
+    "name": "Campus Men's Maxico Running Shoes",
+    "price": 10.12,
+    "description": "The high raised back cover with extra padding.",
+    "ratings": 3,
+    "count": 450,
+    "images": [
+      {
+        "image": "/images/products/5.jpg"
+      }
+    ],
+    "category": "Sports",
+    "seller": "Ebay",
+    "stock": 6,
+    "offers":55
+  },
+  {
+    "stock": 1,
+    "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+      }
+    ],
+    "ratings": 3.9,
+    "count": 120,
+    "offers":75
+  },
+  {
+    "stock": 2,
+    "name": "Mens Casual Premium Slim Fit T-Shirts",
+    "price": 22.3,
+    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
+    "category": "men's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+      }
+    ],
+    "ratings": 4.1,
+    "count": 259,
+    "offers":10
+  },
+  {
+    "stock": 3,
+    "name": "Mens Cotton Jacket",
+    "price": 55.99,
+    "description": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions such as working, hiking, camping, mountain/rock climbing.",
+    "category": "men's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+      }
+    ],
+    "ratings": 4.7,
+    "count": 500,
+    "offers":85
+  },
+  {
+    "stock": 4,
+    "name": "Mens Casual Slim Fit",
+    "price": 15.99,
+    "description": "The color could be slightly different between on the screen and in practice. Please review detailed size information below.",
+    "category": "men's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+      }
+    ],
+    "ratings": 2.1,
+    "count": 430,
+    "offers":90
+  },
+  {
+    "stock": 5,
+    "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+    "price": 695,
+    "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl.",
+    "category": "jewelery",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+      }
+    ],
+    "ratings": 4.6,
+    "count": 400,
+    "offers":20
+  },
+  {
+    "stock": 6,
+    "name": "Solid Gold Petite Micropave",
+    "price": 168,
+    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days. Designed and sold by Hafeez Center in the United States.",
+    "category": "jewelery",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+      }
+    ],
+    "ratings": 3.9,
+    "count": 70,
+    "offers":30
+  },
+  {
+    "stock": 7,
+    "name": "White Gold Plated Princess",
+    "price": 9.99,
+    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement.",
+    "category": "jewelery",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+      }
+    ],
+    "ratings": 3.0,
+    "count": 400,
+    "offers":45
+  },
+  {
+    "stock": 8,
+    "name": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+    "price": 10.99,
+    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel.",
+    "category": "jewelery",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+      }
+    ],
+    "ratings": 1.9,
+    "count": 100,
+    "offers":10
+  },
+  {
+    "stock": 9,
+    "name": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+    "price": 64,
+    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+      }
+    ],
+    "ratings": 3.3,
+    "count": 203,
+    "offers":66
+  },
+  {
+    "stock": 10,
+    "name": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+    "price": 109,
+    "description": "Easy upgrade for faster boot up, shutdown, application load and response.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+      }
+    ],
+    "ratings": 2.9,
+    "count": 470,
+    "offers":77
+  },
+  {
+    "stock": 11,
+    "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+    "price": 109,
+    "description": "3D NAND flash are applied to deliver high transfer speeds. Remarkable transfer speeds enable faster bootup.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+      }
+    ],
+    "ratings": 4.8,
+    "count": 319,
+    "offers":33
+  },
+  {
+    "stock": 12,
+    "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+    "price": 114,
+    "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+      }
+    ],
+    "ratings": 4.8,
+    "count": 400,
+    "offers":11
+  },
+  {
+    "stock": 13,
+    "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+    "price": 599,
+    "description": "21.5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+      }
+    ],
+    "ratings": 2.9,
+    "count": 250,
+    "offers":95
+  },
+  {
+    "stock": 14,
+    "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA)",
+    "price": 999.99,
+    "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side.",
+    "category": "electronics",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+      }
+    ],
+    "ratings": 2.2,
+    "count": 140,
+    "offers":55
+  },
+  {
+    "stock": 15,
+    "name": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+    "price": 56.99,
+    "description": "The Jackets is US standard size, Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece.",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+      }
+    ],
+    "ratings": 2.6,
+    "count": 235,
+    "offers":87
+  },
+  {
+    "stock": 16,
+    "name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+    "price": 29.95,
+    "description": "100% POLYURETHANE (shell) 100% POLYESTER (Lining) Detachable hood with adjustable drawstring.",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+      }
+    ],
+    "ratings": 2.9,
+    "count": 340,
+    "offers":78
+  },
+  {
+    "stock": 17,
+    "name": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    "price": 39.99,
+    "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+      }
+    ],
+    "ratings": 3.8,
+    "count": 679,
+    "offers":29
+  },
+  {
+    "stock": 18,
+    "name": "MBJ Women's Solid Short Sleeve Boat Neck V",
+    "price": 9.85,
+    "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+      }
+    ],
+    "ratings": 4.7,
+    "count": 130,
+    "offers":36
+  },
+  {
+    "stock": 19,
+    "name": "Opna Women's Short Sleeve Moisture",
+    "price": 7.95,
+    "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+      }
+    ],
+    "ratings": 4.5,
+    "count": 146,
+    "offers":43
+  },
+  {
+    "stock": 20,
+    "name": "DANVOUY Womens T Shirt Casual Cotton Short",
+    "price": 12.99,
+    "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+    "category": "women's clothing",
+    "images": [
+      {
+        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+      }
+    ],
+    "ratings": 3.6,
+    "count": 145,
+    "offers":10
+  }
+]
