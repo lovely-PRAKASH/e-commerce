@@ -41,7 +41,7 @@ const PaymentPage = () => {
       
       {/* Display Cart Items */}
       <div className="cart-items-list table-responsive">
-        <table className="table table-striped">
+        <table className="table table-stripeda">
           <thead>
             <tr>
               <th>Product</th>
@@ -50,7 +50,7 @@ const PaymentPage = () => {
               <th>Subtotal</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {cartItems.map((item) => (
               <tr key={item.product._id}>
                 <td>{item.product.name}</td>

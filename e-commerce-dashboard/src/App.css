@@ -1086,7 +1086,7 @@ img.mr-2 {
 .css-1pqm26d-MuiAvatar-img {
   justify-content: center;
 }
-/* userProfile css */
+/* userProfile test css */
 
 
 footer a {
@@ -1094,7 +1094,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #f1f1f1; /* Change to any color on hover */
+  color: #f1f1f1; /* Change to any color on hover## */
 }
 
 footer p {
@@ -1138,3 +1138,4 @@ footer p {
     display: none;
   }
 }
+

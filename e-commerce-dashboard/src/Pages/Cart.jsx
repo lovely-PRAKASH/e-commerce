@@ -88,11 +88,13 @@ const Cart = ({ cartItems, setCartItems }) => {
       (i) => i.product._id !== item.product._id
     );
     setCartItems(filteredItems);
+    localStorage.setItem("cartItems", JSON.stringify(filteredItems));
   };
 
   // Remove all items
   const removeAll = () => {
     setCartItems([]);
+    localStorage.removeItem("cartItems");
   };
 
   // Razorpay payment handler
