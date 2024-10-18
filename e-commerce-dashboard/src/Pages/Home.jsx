@@ -21,6 +21,7 @@ function Home() {
   const [searchParms, setSearchParms] = useSearchParams();
   const [expandedView, setExpandedView] = useState(false); // State to track expanded view
   const location = useLocation();
+  // when route search is active banner is hidden
   const showBanner = location.pathname !== "/search";
       {/*  when route like cart, profile, search navbar is hidden*/}
   const showNavbar = location.pathname !== '/cart' && location.pathname !== '/profile' && location.pathname !== '/search';
