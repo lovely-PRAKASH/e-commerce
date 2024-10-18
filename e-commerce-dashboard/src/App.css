@@ -1101,7 +1101,7 @@ footer p {
   margin: 0;
 }
 
-
+/* media query started here */
 
 @media (max-width: 768px) {
   .homeProducts .info {
@@ -1139,3 +1139,4 @@ footer p {
   }
 }
 
+/* media query ends here */

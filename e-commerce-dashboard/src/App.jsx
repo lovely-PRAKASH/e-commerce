@@ -68,7 +68,7 @@ function App() {
 
   if (loading) {
     return <div><CircularProgress size={34} /></div>;
-  }
+  }  
 
   return (
     <ThemeProvider theme={darkMode}>
