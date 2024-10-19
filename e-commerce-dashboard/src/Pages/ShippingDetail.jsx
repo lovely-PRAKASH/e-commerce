@@ -63,6 +63,7 @@ const ShippingDetail = () => {
         </div>
 
         <div className="form-group">
+          {/* city block  */}
           <label>City</label>
           <input
             type="text"
