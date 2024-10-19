@@ -35,9 +35,11 @@ const ShippingDetail = () => {
 
   return (
     <div className="shipping-form-container mt-3">
+     {/* shipping detail block */}
       <h2>Shipping Details</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
+          {/*  */}
           <label>Full Name</label>
           <input
             type="text"
