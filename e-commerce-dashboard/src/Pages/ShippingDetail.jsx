@@ -35,9 +35,11 @@ const ShippingDetail = () => {
 
   return (
     <div className="shipping-form-container mt-3">
+     {/* shipping detail block */}
       <h2>Shipping Details</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
+          {/*  */}
           <label>Full Name</label>
           <input
             type="text"
@@ -49,6 +51,7 @@ const ShippingDetail = () => {
         </div>
 
         <div className="form-group">
+          {/* address block */}
           <label>Address</label>
           <input
             type="text"
@@ -60,6 +63,7 @@ const ShippingDetail = () => {
         </div>
 
         <div className="form-group">
+          {/* city block  */}
           <label>City</label>
           <input
             type="text"
