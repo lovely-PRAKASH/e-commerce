@@ -43,7 +43,7 @@
   .btn-submit:hover {
     background-color: #218838;
   }
-  
+  /* payment container style is added */
   .payment-container{
     max-width: 600px;
     height: auto;
