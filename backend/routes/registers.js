@@ -5,3 +5,4 @@ const router = express.Router();
 router.route("/register").post(createRegisters);
 
 module.exports = router;
+// register route added and exported
