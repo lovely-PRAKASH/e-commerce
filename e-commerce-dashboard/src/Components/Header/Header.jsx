@@ -44,8 +44,14 @@ function Header({ cartItems, setMode, mode }) {
   const handleProfile = () => {
     // Navigate to profile page or perform relevant action
     console.log("Profile clicked");
+    navigate("/profile")
     handleClose();
   };
+
+  const handleDshboard=()=>{
+    navigate("/dashboard");
+    handleClose();
+  }
 
   // const handleMyAccount = () => {
   //   // Navigate to account page or perform relevant action
@@ -97,9 +103,8 @@ function Header({ cartItems, setMode, mode }) {
                 anchorOrigin={{ vertical: "top", horizontal: "right" }}
                 transformOrigin={{ vertical: "top", horizontal: "right" }}
               >
-                <Link to='/profile'>
+                <MenuItem onClick={handleDshboard}>Dashboard</MenuItem>
                   <MenuItem onClick={handleProfile}>Profile</MenuItem>
-                </Link>
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
 
