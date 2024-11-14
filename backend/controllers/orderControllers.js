@@ -25,3 +25,14 @@ exports.createOrders = async (req, res, next) => {
   //   order,
   // });
 };
+
+
+exports.getOrders = async (req, res, next) => {
+  try {
+    const orders = await orderModel.find();
+
+    res.status(200).json({"orders":orders})
+  } catch (error) {
+    res.status(400).json(error)
+  }
+}
