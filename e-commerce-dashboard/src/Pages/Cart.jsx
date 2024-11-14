@@ -97,28 +97,6 @@ const Cart = ({ cartItems, setCartItems }) => {
     localStorage.removeItem("cartItems");
   };
 
-  // Razorpay payment handler
-  const handlePaymentSuccess = (response) => {
-    toast.success("Payment successful!", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: true,
-      theme: "colored",
-      transition: Bounce,
-    });
-    setComplete(true);
-    setCartItems([]); // Clear cart
-  };
-
-  const handlePaymentError = (error) => {
-    toast.error("Payment failed. Please try again.", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: true,
-      theme: "colored",
-      transition: Bounce,
-    });
-  };
 
   const placeOrderHandler = async () => {
     try{

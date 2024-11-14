@@ -21,6 +21,10 @@ const registerSchema = new mongoose.Schema({
     type:String,
     default:'user123.jpg',
   },
+  role:{
+    type:String,
+    default:'user'
+  },
   createdAt: {
     type: Date,
     default: Date.now,
