@@ -2,36 +2,54 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import "../styles/ShippingDetail.css";
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const PaymentPage = () => {
   const location = useLocation();
-  const { cartItems, total } = location.state;
+  const { cartItems, total, shippingInfo } = location.state;
   
   const handlePayment = async () => {
     const stripe = await loadStripe('pk_test_51Q5PyvAQeC3Gz7CyXV3MTcjnalQm7gyVdhxi3om8s2e6ADPMboOEnIixBwrhrRW5bg02gKGwTW2cqcQHdTivyllX00QwPWxcLu');
     
     try {
+      // Step 1: Initiate payment request
       const response = await fetch(import.meta.env.VITE_API_URL + "/get-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          CartItems: cartItems // Send cartItems array as CartItems
+          CartItems:cartItems // Send cartItems as part of the payment request
         })
       });
-  
+
       const session = await response.json();
-  
-      if (session.id) {
-        const result = await stripe.redirectToCheckout({
-          sessionId: session.id,
-        });
-  
-        if (result.error) {
-          console.error(result.error);
-        }
+
+      if (!session.id) {
+        console.error("Session ID is missing.");
+        return;
+      }
+
+      // Step 2: Send order details to the server after getting the payment session ID
+      await axios.post(`${import.meta.env.VITE_API_URL}/order`, {
+        shippingInfo,
+        cartItems,
+        totalAmount: total,
+        paymentSessionId: session.id // Store the session ID with the order
+      }).then(response => {
+        console.log("Order submission response:", response.data);
+      }).catch(error => {
+        console.error("Error submitting order:", error);
+      });
+
+      // Step 3: Redirect to Stripe checkout
+      const result = await stripe.redirectToCheckout({
+        sessionId: session.id,
+      });
+
+      if (result.error) {
+        console.error(result.error);
       }
     } catch (error) {
-      console.error("Payment initiation failed:", error);
+      console.error("Payment initiation or order submission failed:", error);
     }
   };
 
@@ -41,7 +59,7 @@ const PaymentPage = () => {
       
       {/* Display Cart Items */}
       <div className="cart-items-list table-responsive">
-        <table className="table table-stripeda">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>Product</th>
@@ -50,7 +68,7 @@ const PaymentPage = () => {
               <th>Subtotal</th>
             </tr>
           </thead>
-          <tbody >
+          <tbody>
             {cartItems.map((item) => (
               <tr key={item.product._id}>
                 <td>{item.product.name}</td>
@@ -65,7 +83,7 @@ const PaymentPage = () => {
 
       {/* Display Total Amount */}
       <div className="total-amount mt-3 text-right">
-        <h4 className='font-weight-bold'>Total: ₹{total.toFixed(2)}</h4>
+        <h4 className="font-weight-bold">Total: ₹{total.toFixed(2)}</h4>
       </div>
 
       <button 
