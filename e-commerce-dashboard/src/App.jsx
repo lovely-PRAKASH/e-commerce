@@ -18,6 +18,8 @@ import PaymentFailure from "./Pages/PaymentFailure.jsx";
 import ShippingDetail from "./Pages/ShippingDetail.jsx";
 import PaymentPage from "./Pages/PaymentPage.jsx";
 import  Dashboard  from "./Components/admin/Dashboard.jsx";
+import UserTable from "./Components/admin/UserTable.jsx";
+import ProductTable from "./Components/admin/ProductTable.jsx";
 
 const myContext = createContext();
 
@@ -102,6 +104,8 @@ function App() {
           <Route path="/success" element={<PaymentSuccess />} />
           <Route path="/failure" element={<PaymentFailure />} />
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/users" element={<UserTable/>}/>
+          <Route path="/products" element={<ProductTable/>}/>
         </Routes>
       </myContext.Provider>
     </ThemeProvider>
