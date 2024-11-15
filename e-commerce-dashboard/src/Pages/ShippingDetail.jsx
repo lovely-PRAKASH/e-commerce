@@ -28,7 +28,8 @@ const ShippingDetail = () => {
     navigate("/payment",{
       state:{
         cartItems:location.state.cartItems,
-        total:location.state.total
+        total:location.state.total,
+        shippingInfo:shippingInfo,
       }
     })
   };

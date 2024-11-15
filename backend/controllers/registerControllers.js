@@ -33,3 +33,14 @@ exports.createRegisters = async (req, res) => {
   }
 };
 
+exports.getUsers=async(req, res, next)=>{
+ try {
+  const users=await registerModel.find();
+
+  res.status(200).json({"users":users})
+ } catch (error) {
+  res.status(400).json({
+    error
+  })
+ }
+}

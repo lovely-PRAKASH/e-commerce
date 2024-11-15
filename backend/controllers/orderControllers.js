@@ -1,30 +1,49 @@
 const { default: ProductModel } = require("../models/productModel");
 const orderModel = require("../models/orderModel");
 
-// orderController api- api/v1/order/
 exports.createOrders = async (req, res, next) => {
-  console.log(req.body, 'data');
-  // const order=orderModel.create(req.body);
-  const cartItems = req.body;
-  const amount = Number(
-    cartItems.reduce((acc, item) => acc + item.product.price * item.qty, 0)
-  ).toFixed(2);
-  // console.log(amount, "AMT");
-  const status = "pending";
-  const order = await orderModel.create({ cartItems, amount, status });
+  try {
+    console.log(req.body)
+    const { cartItems, shippingInfo, totalAmount, paymentSessionId } = req.body; // Destructure properties from req.body
 
-  // updating product stock
-  // cartItems.forEach(async (item) => {
-  //   const product = await ProductModel.findById(item.product._id);
-  //   product.stock = product.stock - item.qty;
-  //   await product.save();
-  // });
+    // Calculate the amount directly from the provided data, if required
+    const amount = Number(
+      cartItems.reduce((acc, item) => acc + parseFloat(item.product.price) * item.qty, 0)
+    ).toFixed(2);
 
-  // res.json({
-  //   success: true,
-  //   order,
-  // });
+    // Set the order status as "pending" initially
+    const status = "pending";
+
+    // Create the order with the extracted details
+    const order = await orderModel.create({
+      cartItems,
+      amount,
+      shippingInfo,
+      totalAmount,
+      paymentSessionId,
+      status,
+    });
+
+    // Update product stock in the database
+    // cartItems.forEach(async (item) => {
+    //   const product = await ProductModel.findById(item.product._id);
+    //   if (product) {
+    //     product.stock = product.stock - item.qty;
+    //     await product.save();
+    //   }
+    // });
+
+    // Respond with the created order details
+    res.json({
+      success: true,
+      order,
+    });
+  } catch (error) {
+    console.error("Error creating order:", error);
+    res.status(500).json({ success: false, message: "Order creation failed", error });
+  }
 };
+
 
 
 exports.getOrders = async (req, res, next) => {
