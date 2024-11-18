@@ -45,7 +45,6 @@ exports.createOrders = async (req, res, next) => {
 };
 
 
-
 exports.getOrders = async (req, res, next) => {
   try {
     const orders = await orderModel.find();
@@ -55,3 +54,4 @@ exports.getOrders = async (req, res, next) => {
     res.status(400).json(error)
   }
 }
+
