@@ -54,6 +54,9 @@ function Dashboard() {
   const handleProduct=()=>{
     navigate("/products")
   }
+  const handleAddProduct=()=>{
+    navigate("/addProducts")
+  }
   return (
     <div className="container-fluid">
       <div className="row">
@@ -73,8 +76,8 @@ function Dashboard() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <FaShoppingCart className="me-2" /> Orders
+                <a className="nav-link" href="#" onClick={handleAddProduct}>
+                  <FaShoppingCart className="me-2" /> Add Products
                 </a>
               </li>
               <li className="nav-item">

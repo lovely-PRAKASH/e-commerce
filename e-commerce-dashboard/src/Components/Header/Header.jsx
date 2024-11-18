@@ -13,7 +13,7 @@ import { IoMdSunny } from "react-icons/io";
 import { BsMoonStarsFill } from "react-icons/bs";
 
 function Header({ cartItems, setMode, mode }) {
-  const { countryList, dollerToRupees = 61.60 } = useContext(myContext);
+  const { countryList, dollerToRupees = 61.06 } = useContext(myContext);
   const [isOpen, setisOpen] = useState(null); // State to control the menu visibility
   const navigate = useNavigate(); // Hook for navigation
   const location = useLocation();
@@ -52,12 +52,6 @@ function Header({ cartItems, setMode, mode }) {
     navigate("/dashboard");
     handleClose();
   }
-
-  // const handleMyAccount = () => {
-  //   // Navigate to account page or perform relevant action
-  //   console.log("My account clicked");
-  //   handleClose();
-  // };
 
   return (
 <div className="headerWrapper">

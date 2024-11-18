@@ -89,13 +89,13 @@ function ProductTable() {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Id</th>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
                             <th>Category</th>
                             <th>Stock</th>
+                            <th>Offers</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -103,7 +103,6 @@ function ProductTable() {
                         {products.map((product, index) => (
                             <tr key={product._id}>
                                 <td>{index + 1}</td>
-                                <td>{product._id}</td>
                                 <td>
                                     <img
                                         src={product.images[0]?.image}
@@ -214,6 +213,26 @@ function ProductTable() {
                                 </td>
                                 <td>
                                     {product.isEditMode ? (
+                                        <input
+                                            type="number"
+                                            value={product.offers}
+                                            onChange={(e) =>
+                                                setProducts(
+                                                    products.map((p) =>
+                                                        p._id === product._id
+                                                            ? { ...p, offers: e.target.value }
+                                                            : p
+                                                    )
+                                                )
+                                            }
+                                            className="form-control"
+                                        />
+                                    ) : (
+                                        product.offers
+                                    )}
+                                </td>
+                                <td>
+                                    {product.isEditMode ? (
                                         <button
                                             className="btn btn-sm btn-success me-2"
                                             onClick={() => handleUpdateProduct(product._id, product)}
@@ -222,7 +241,7 @@ function ProductTable() {
                                         </button>
                                     ) : (
                                         <button
-                                            className="btn btn-sm btn-warning me-2"
+                                            className="btn btn-sm btn-warning me-2 w-100 mb-2"
                                             onClick={() => toggleEditMode(product._id)}
                                         >
                                             Edit
