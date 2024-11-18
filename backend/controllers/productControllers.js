@@ -1,3 +1,4 @@
+const productModel = require("../models/productModel");
 const ProductModel = require("../models/productModel");
 
 // get product api-/api/v1/products/
@@ -51,5 +52,28 @@ exports.getSingleProduct = async (req, res, next) => {
       success: false,
       message: "unable to find data",
     });
+  }
+};
+
+
+exports.updateProduct = async (req, res, next) => {
+  try {
+    console.log("serverdata", req.body); // Log incoming data to verify it
+
+    // Update product by ID
+    const updatedProduct = await productModel.findByIdAndUpdate(
+      req.params.id, // Filter to find the product by ID
+      req.body,      // Update the fields with req.body
+      { new: true }  // Return the updated product after the update
+    );
+
+    if (!updatedProduct) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.status(200).json({ updatedProduct, message: "Product updated successfully" });
+  } catch (error) {
+    console.error("Update error:", error); // Log the error
+    res.status(400).json({ error: error.message });
   }
 };
