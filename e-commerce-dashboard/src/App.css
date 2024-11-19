@@ -100,7 +100,7 @@ body {
 .headerSearch{
   width: 60%;
   height: 60px;
-  background: #f3f4f7;
+  background: transparent;
   padding: 10px;
   border-radius: 10px;
   position: relative;
@@ -246,7 +246,7 @@ font-size: 26px;
   color: #fdb813;
 }
 .darkMode .moonSvg{
-  color: #6a6c6d;
+  color: #007bff;
 }
 
 nav .container .navpart1 .catwrapper .allCatTab {
