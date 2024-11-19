@@ -61,7 +61,7 @@ function Dashboard() {
     <div className="container-fluid">
       <div className="row">
         {/* Sidebar */}
-        <nav className="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav className="col-md-2 d-none d-md-block  sidebar">
           <div className="sidebar-sticky">
             <h5 className="text-center mt-3">Admin Dashboard</h5>
             <ul className="nav flex-column">

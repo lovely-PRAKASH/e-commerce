@@ -192,8 +192,8 @@ const Cart = ({ cartItems, setCartItems }) => {
       </div>
     </div>
   ) : (
-    <div className="container mt-4">
-      <p>Your cart is empty. <Link to="/">Return to Shop</Link></p>
+    <div className="container d-flex display-4 mt-4 justify-content-center">
+      <p className="d-flex flex-column">Your cart is empty. <Link to="/" className="d-flex justify-content-center mt-5">Return to Shop</Link></p>
     </div>
   );
 };
