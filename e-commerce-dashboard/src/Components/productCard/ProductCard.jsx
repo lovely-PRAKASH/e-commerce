@@ -90,10 +90,12 @@ const ProductCard = ({ product, expanded = false }) => {
           <h4 onClick={viewProductDetail}>
             {product?.name?.length > 20 ? `${product.name.substr(0, 15)}...` : product?.name}
           </h4>
-          <span className={`stock ${product.stock > 0 ? "text-success" : "text-danger"}`}>
-            {product.stock > 0 ? "IN STOCK" : "OUT OF STOCK"}
-          </span>
-          <Rating name="size-small" value={product.ratings} size="small" precision={0.5} readOnly />
+          <div className="d-flex justify-content-center align-items-center">
+            <span className={`stock ${product.stock > 0 ? "text-success" : "text-danger"}`}>
+              {product.stock > 0 ? "IN STOCK" : "OUT OF STOCK"}
+            </span>
+            <Rating name="size-small" value={product.ratings} size="small" precision={0.5} readOnly />
+          </div>
           <div className="price">
             <del className="oldPrice">
               ₹{Number(product?.price * dollerToRupees * 2).toFixed(2)}
@@ -121,8 +123,8 @@ const ProductCard = ({ product, expanded = false }) => {
             </Button>
           </div>
           <Button
-          // className="d-flex flex-row"
-            variant="contained"
+            className="d-flex flex-row mb-1"
+            variant="outlined"
             disabled={product.stock === 0}
             onClick={addToCart}
           >
