@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const AddProduct = () => {
   const [productData, setProductData] = useState({
@@ -35,7 +36,7 @@ const AddProduct = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(import.meta.env.VITE_API_URL+"/addproduct", productData);
+      const response = await axios.post(import.meta.env.VITE_API_URL + "/addproduct", productData);
       console.log("Product added successfully:", response.data);
       // alert("Product added successfully!");
       setProductData({
@@ -58,6 +59,13 @@ const AddProduct = () => {
 
   return (
     <div className="container mt-5">
+      <div className="d-flex justify-content-center"
+        style={{ gap: 5 }}>
+        <Link to="/dashboard"><p>Dashboard</p></Link>
+        <Link to="/products"><p>Products</p></Link>
+        <Link to="/addproducts"><p>Add product</p></Link>
+        <Link to="/users"><p>Users</p></Link>
+      </div>
       <h2>Add Product</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
