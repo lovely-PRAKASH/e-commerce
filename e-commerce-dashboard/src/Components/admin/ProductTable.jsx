@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ProductTable() {
     const [products, setProducts] = useState([]);
@@ -83,6 +84,13 @@ function ProductTable() {
 
     return (
         <div className="container mt-4">
+           <div className="d-flex justify-content-center" 
+           style={{gap:5}}>
+            <Link to="/dashboard"><p>Dashboard</p></Link>
+            <Link to="/products"><p>Products</p></Link>
+            <Link to="/addproducts"><p>Add product</p></Link>
+            <Link to="/users"><p>Users</p></Link> 
+           </div>
             <h2 className="text-center mb-4">Product Management</h2>
             <div className="table-responsive">
                 <table className="table table-striped table-hover w-100">
