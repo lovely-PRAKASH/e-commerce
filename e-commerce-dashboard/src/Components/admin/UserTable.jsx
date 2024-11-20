@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+// import "../../../public/profile"
 function UserTable() {
     const [users, setUsers] = useState([]);
 
@@ -15,9 +16,16 @@ function UserTable() {
         };
         fetchUsers();
     }, []);
-
+console.log(users)
     return (
         <div className="container mt-4">
+                       <div className="d-flex justify-content-center" 
+           style={{gap:5}}>
+            <Link to="/dashboard"><p>Dashboard</p></Link>
+            <Link to="/products"><p>Products</p></Link>
+            <Link to="/addproducts"><p>Add product</p></Link>
+            <Link to="/users"><p>Users</p></Link> 
+           </div>
             <h2 className="text-center mb-4">User List</h2>
             <div className="table-responsive">
                 <table className="table table-striped table-hover">
@@ -37,13 +45,13 @@ function UserTable() {
                                 <td>{index + 1}</td>
                                 <td>
                                     <img
-                                        src={user.avatar}
+                                        src={`../../../public/profile/${user.avatar}`}
                                         alt={`${user.username}'s avatar`}
                                         width="40"
                                         height="40"
                                         style={{ borderRadius: '50%' }}
                                     />
-                                </td>
+                                </td>               
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
                                 <td>{user.role}</td>
