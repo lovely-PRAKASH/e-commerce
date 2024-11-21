@@ -168,7 +168,7 @@ const ProductModel = ({ closeProductModel, product }) => {
                       <InnerImageZoom
                         zoomType="hover"
                         zoomScale={1.5}
-                        src={img.image}
+                        src={`/products/${img.image}`}
                         alt={product.name}
                         className="w-100"
                       />
@@ -185,7 +185,7 @@ const ProductModel = ({ closeProductModel, product }) => {
                   product.images.map((img, index) => (
                     <div className="item" key={img._id}>
                       <img
-                        src={img.image}
+                        src={`/products/${img.image}`}
                         onClick={() => goto(index)}
                         className="w-100"
                         alt={`Thumbnail of ${product.name}`}
