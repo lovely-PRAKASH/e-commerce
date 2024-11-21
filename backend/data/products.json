@@ -7,16 +7,16 @@
     "count": 340,
     "images": [
       {
-        "image": "/images/products/1.jpg"
+        "image": "1.jpg"
       },
       {
-        "image": "/images/products/1.jpg"
+        "image": "1.jpg"
       }
     ],
     "category": "Mobile Phones",
     "seller": "Amazon",
     "stock": 5,
-    "offers":20
+    "offers": 20
   },
   {
     "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
@@ -26,14 +26,13 @@
     "count": 240,
     "images": [
       {
-        "image": "/images/products/2.jpg"
+        "image": "2.jpg"
       }
     ],
     "category": "Accessories",
     "seller": "Flipkart",
     "stock": 9,
-    "offers":30
-
+    "offers": 30
   },
   {
     "name": "Dell Inspiron 3511 Laptop",
@@ -43,13 +42,13 @@
     "count": 220,
     "images": [
       {
-        "image": "/images/products/3.jpg"
+        "image": "3.jpg"
       }
     ],
     "category": "Laptops",
     "seller": "Ebay",
     "stock": 9,
-    "offers":25
+    "offers": 25
   },
   {
     "name": "Lenovo IdeaPad Slim 3 Laptop",
@@ -59,13 +58,13 @@
     "count": 200,
     "images": [
       {
-        "image": "/images/products/6.jpg"
+        "image": "6.jpg"
       }
     ],
     "category": "Laptops",
     "seller": "Ebay",
     "stock": 9,
-    "offers":35
+    "offers": 35
   },
   {
     "name": "ASUS VivoBook 15 Laptop",
@@ -75,13 +74,13 @@
     "count": 100,
     "images": [
       {
-        "image": "/images/products/7.jpg"
+        "image": "7.jpg"
       }
     ],
     "category": "Laptops",
     "seller": "Ebay",
     "stock": 9,
-    "offers":40
+    "offers": 40
   },
   {
     "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
@@ -91,13 +90,13 @@
     "count": 150,
     "images": [
       {
-        "image": "/images/products/4.jpg"
+        "image": "4.jpg"
       }
     ],
     "category": "Headphones",
     "seller": "Amazon",
     "stock": 4,
-    "offers":60
+    "offers": 60
   },
   {
     "name": "Campus Men's Maxico Running Shoes",
@@ -107,13 +106,13 @@
     "count": 450,
     "images": [
       {
-        "image": "/images/products/5.jpg"
+        "image": "5.jpg"
       }
     ],
     "category": "Sports",
     "seller": "Ebay",
     "stock": 6,
-    "offers":55
+    "offers": 55
   },
   {
     "stock": 1,
@@ -123,12 +122,12 @@
     "category": "men's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+        "image": "fijalrew.jpg"
       }
     ],
     "ratings": 3.9,
     "count": 120,
-    "offers":75
+    "offers": 75
   },
   {
     "stock": 2,
@@ -138,12 +137,12 @@
     "category": "men's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+        "image": "Mens Casual Premium Slim Fit T-Shirts.jpg"
       }
     ],
     "ratings": 4.1,
     "count": 259,
-    "offers":10
+    "offers": 10
   },
   {
     "stock": 3,
@@ -153,12 +152,12 @@
     "category": "men's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+        "image": "Mens Cotton Jacket.jpg"
       }
     ],
     "ratings": 4.7,
     "count": 500,
-    "offers":85
+    "offers": 85
   },
   {
     "stock": 4,
@@ -168,12 +167,12 @@
     "category": "men's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+        "image": "Mens Casual Slim Fit.jpg"
       }
     ],
     "ratings": 2.1,
     "count": 430,
-    "offers":90
+    "offers": 90
   },
   {
     "stock": 5,
@@ -183,12 +182,12 @@
     "category": "jewelery",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+        "image": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet.jpg"
       }
     ],
     "ratings": 4.6,
     "count": 400,
-    "offers":20
+    "offers": 20
   },
   {
     "stock": 6,
@@ -198,12 +197,12 @@
     "category": "jewelery",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+        "image": "Solid Gold Petite Micropave.jpg"
       }
     ],
     "ratings": 3.9,
     "count": 70,
-    "offers":30
+    "offers": 30
   },
   {
     "stock": 7,
@@ -213,12 +212,12 @@
     "category": "jewelery",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+        "image": "White Gold Plated Princess.jpg"
       }
     ],
     "ratings": 3.0,
     "count": 400,
-    "offers":45
+    "offers": 45
   },
   {
     "stock": 8,
@@ -228,12 +227,12 @@
     "category": "jewelery",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+        "image": "Pierced Owl Rose Gold Plated Stainless Steel Double.jpg"
       }
     ],
     "ratings": 1.9,
     "count": 100,
-    "offers":10
+    "offers": 10
   },
   {
     "stock": 9,
@@ -243,12 +242,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+        "image": "WD 2TB Elements Portable External Hard Drive - USB 3.0.jpg"
       }
     ],
     "ratings": 3.3,
     "count": 203,
-    "offers":66
+    "offers": 66
   },
   {
     "stock": 10,
@@ -258,12 +257,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+        "image": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb.jpg"
       }
     ],
     "ratings": 2.9,
     "count": 470,
-    "offers":77
+    "offers": 77
   },
   {
     "stock": 11,
@@ -273,12 +272,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+        "image": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5.jpg"
       }
     ],
     "ratings": 4.8,
     "count": 319,
-    "offers":33
+    "offers": 33
   },
   {
     "stock": 12,
@@ -288,12 +287,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+        "image": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive.jpg"
       }
     ],
     "ratings": 4.8,
     "count": 400,
-    "offers":11
+    "offers": 11
   },
   {
     "stock": 13,
@@ -303,12 +302,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+        "image": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin.jpg"
       }
     ],
     "ratings": 2.9,
     "count": 250,
-    "offers":95
+    "offers": 95
   },
   {
     "stock": 14,
@@ -318,12 +317,12 @@
     "category": "electronics",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+        "image": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA).jpg"
       }
     ],
     "ratings": 2.2,
     "count": 140,
-    "offers":55
+    "offers": 55
   },
   {
     "stock": 15,
@@ -333,12 +332,12 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+        "image": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats.jpg"
       }
     ],
     "ratings": 2.6,
     "count": 235,
-    "offers":87
+    "offers": 87
   },
   {
     "stock": 16,
@@ -348,12 +347,12 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+        "image": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket.jpg"
       }
     ],
     "ratings": 2.9,
     "count": 340,
-    "offers":78
+    "offers": 78
   },
   {
     "stock": 17,
@@ -363,12 +362,12 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+        "image": "Rain Jacket Women Windbreaker Striped Climbing Raincoats.jpg"
       }
     ],
     "ratings": 3.8,
     "count": 679,
-    "offers":29
+    "offers": 29
   },
   {
     "stock": 18,
@@ -378,12 +377,12 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+        "image": "MBJ Women's Solid Short Sleeve Boat Neck V.jpg"
       }
     ],
     "ratings": 4.7,
     "count": 130,
-    "offers":36
+    "offers": 36
   },
   {
     "stock": 19,
@@ -393,12 +392,12 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+        "image": "Opna Women's Short Sleeve Moisture.jpg"
       }
     ],
     "ratings": 4.5,
     "count": 146,
-    "offers":43
+    "offers": 43
   },
   {
     "stock": 20,
@@ -408,11 +407,11 @@
     "category": "women's clothing",
     "images": [
       {
-        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+        "image": "DANVOUY Womens T Shirt Casual Cotton Short.jpg"
       }
     ],
     "ratings": 3.6,
     "count": 145,
-    "offers":10
+    "offers": 10
   }
 ]
