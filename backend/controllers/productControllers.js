@@ -1,4 +1,6 @@
 const productModel = require("../models/productModel");
+const multer = require('multer');
+const upload = multer({ dest: '../../e-commerce-dashboard/public/products' }); 
 
 // get product api-/api/v1/products/
 exports.getProduct = async (req, res, next) => {
@@ -98,7 +100,8 @@ exports.deleteProduct = async (req, res, next) => {
   }
 }
 
-exports.addProduct = async(req, res, next) => {
+
+exports.addProduct = async (req, res, next) => {
   try {
     console.log("server added data", req.body);
     const {
@@ -107,36 +110,38 @@ exports.addProduct = async(req, res, next) => {
       description,
       ratings,
       count,
-      images,
       category,
       seller,
       stock,
       offers,
     } = req.body;
 
-    const editedRating=ratings>5?5:ratings;
+    // console.log(req.files)
+    const images = req.files.map(file => ({image:file.filename})); // Access uploaded files
+// console.log(images);
+    const editedRating = ratings > 5 ? 5 : ratings;
 
-    const newProduct= await productModel.create({
+    const newProduct = await productModel.create({
       name,
       price,
       description,
-      ratings:editedRating,
+      ratings: editedRating,
       count,
       images,
       category,
       seller,
       stock,
       offers,
-    })
-
+    });
 
     res.status(200).json({
       newProduct,
-      message:"product added successfully"
-    })
+      message: "product added successfully",
+    });
   } catch (error) {
     res.status(400).json({
-      message: error.message
-    })
+      message: error.message,
+    });
   }
-}
+};
+
