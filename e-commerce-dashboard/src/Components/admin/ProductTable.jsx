@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { LiaGreaterThanSolid } from "react-icons/lia";
 
 function ProductTable() {
     const [products, setProducts] = useState([]);
@@ -86,9 +87,9 @@ function ProductTable() {
         <div className="container mt-4">
            <div className="d-flex justify-content-center" 
            style={{gap:5}}>
-            <Link to="/dashboard"><p>Dashboard</p></Link>
-            <Link to="/products"><p>Products</p></Link>
-            <Link to="/addproducts"><p>Add product</p></Link>
+            <Link to="/dashboard"><p>Dashboard |</p></Link>
+            <Link to="/products"><p>Products |</p></Link>
+            <Link to="/addproducts"><p>Add product |</p></Link>
             <Link to="/users"><p>Users</p></Link> 
            </div>
             <h2 className="text-center mb-4">Product Management</h2>
@@ -113,7 +114,7 @@ function ProductTable() {
                                 <td>{index + 1}</td>
                                 <td>
                                     <img
-                                        src={product.images[0]?.image}
+                                        src={`/products/${product.images[0]?.image}`}
                                         alt={product.name}
                                         width="40"
                                         height="40"

@@ -64,12 +64,14 @@ const ProductCard = ({ product, expanded = false }) => {
       toast.info(`${product.name} is already in the cart`, { theme: "colored" });
     }
   };
-
   return (
     <>
       <div className="productItem">
         <div className="imgwrapper">
-          <img src={product?.images?.[0]?.image || "default-image.jpg"} alt="Product" />
+          <img src={`/products/${product?.images?.[0]?.image}`} 
+          // alt="No image found"
+          // onerror="this.src='/products/defaultImage.jpg'"
+          />
           <span className={`badge ${product.offers <= 50 ? "badge-primary" : "badge-error"}`}>
             {product.offers}%
           </span>

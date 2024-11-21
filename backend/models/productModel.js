@@ -3,36 +3,39 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "product name is required"]
+    required: [true, "Product name is required"],
   },
   price: {
     type: Number,
-    required: [true, "price is required"]
+    required: [true, "Price is required"],
   },
   description: String,
   ratings: {
     type: Number,
-    required:[true, "ratings is required"]
+    required: [true, "Ratings are required"],
   },
   count: {
     type: Number,
-    required: [true, "product count is required"]
+    required: [true, "Product count is required"],
   },
-  images: [
-    {
-      image: String,
-    },
-  ],
+  images: {
+    type: [
+      {
+        image: { type: String, default: "/products/defaultImage.jpg" },
+      },
+    ],
+    default: [{ image: "/products/defaultImage.jpg" }],
+  },
   category: {
     type: String,
-    required: [true, "please enter category"]
+    required: [true, "Please enter a category"],
   },
   seller: String,
   stock: {
-    type: Number
+    type: Number,
   },
   offers: {
-    type: Number
+    type: Number,
   },
   createdAt: {
     type: Date,
@@ -40,6 +43,15 @@ const productSchema = new mongoose.Schema({
   },
 });
 
+// Ensure default image if images array is empty
+productSchema.pre("save", function (next) {
+  if (!this.images || this.images.length === 0) {
+    this.images = [{ image: "defaultImage.png" }];
+  }
+  next();
+});
+
+// Create the model AFTER defining middleware
 const productModel = mongoose.model("Product", productSchema);
 
 module.exports = productModel;
