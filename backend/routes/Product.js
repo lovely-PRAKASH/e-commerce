@@ -1,4 +1,5 @@
 const express = require("express");
+const upload= require("../utils/middlewares/upload")
 const {
   getProduct,
   getSingleProduct,
@@ -16,9 +17,7 @@ router.route("/updateproduct/:id").put(updateProduct);
 
 router.route("/deleteproduct/:id").delete(deleteProduct);
 
-router.route("/addproduct").post(addProduct);
-
-
+router.route("/addproduct").post(upload.array('images'),addProduct);
 
 
 module.exports = router;
