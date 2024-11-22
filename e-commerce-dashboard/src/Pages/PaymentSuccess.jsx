@@ -3,21 +3,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const PaymentSuccess = () => {
   const navigate = useNavigate();
-  // const location = useLocation();
-  // const { cartItems, total, shippingInfo } = location.state;
+  const location=useLocation();
 
-  // useEffect(async () => {
-  //   await axios.post(`${import.meta.env.VITE_API_URL}/order`, {
-  //     shippingInfo,
-  //     cartItems,
-  //     totalAmount: total,
-  //     // paymentSessionId: session.id // Store the session ID with the order
-  //   }).then(response => {
-  //     console.log("Order submission response:", response.data);
-  //   }).catch(error => {
-  //     console.error("Error submitting order:", error);
-  //   });
-  // }, [])
+  console.log("location",location);
   return (
     <div className="text-center mt-5">
       <h1 className="text-success display-4">Payment Successful!</h1>
