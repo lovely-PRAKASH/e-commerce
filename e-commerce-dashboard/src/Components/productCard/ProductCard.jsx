@@ -92,11 +92,11 @@ const ProductCard = ({ product, expanded = false }) => {
           <h4 onClick={viewProductDetail}>
             {product?.name?.length > 20 ? `${product.name.substr(0, 15)}...` : product?.name}
           </h4>
-          <div className="d-flex justify-content-center align-items-center">
+            <Rating name="size-small" value={product.ratings} size="small" precision={0.5} readOnly />
+          <div className="d-flex align-items-center">
             <span className={`stock ${product.stock > 0 ? "text-success" : "text-danger"}`}>
               {product.stock > 0 ? "IN STOCK" : "OUT OF STOCK"}
             </span>
-            <Rating name="size-small" value={product.ratings} size="small" precision={0.5} readOnly />
           </div>
           <div className="price">
             <del className="oldPrice">
@@ -115,16 +115,17 @@ const ProductCard = ({ product, expanded = false }) => {
           )}
         </div>
         <div className="d-flex flex-column align-items-center">
-          <div className="quantityDrop d-flex mb-2 align-items-center">
+          <div className="ProductQuantityDrop d-flex mb-2 align-items-center">
             <Button onClick={minus}>
               <FaMinus />
             </Button>
             <input type="text" value={qty} className="mx-2 text-center" readOnly />
-            <Button onClick={plus}>
+            <Button style={{fontSize:"12px",outline:"none"}} onClick={plus}>
               <FaPlus />
             </Button>
           </div>
           <Button
+          style={{outline:"none"}}
             className="d-flex flex-row mb-1"
             variant="outlined"
             disabled={product.stock === 0}

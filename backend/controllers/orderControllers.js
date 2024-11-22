@@ -55,3 +55,26 @@ exports.getOrders = async (req, res, next) => {
   }
 }
 
+
+exports.getOrderByEmail = async (req, res, next) => {
+  console.log(req.query);
+  try {
+    const { email } = req.query; // Assuming email is passed as a query parameter
+
+    if (!email) {
+      return res.status(400).json({ error: "Email ID is required to fetch orders" });
+    }
+
+    const orders = await orderModel.find({ "shippingInfo.email": email }); // Assuming email is stored in `shippingInfo`
+
+    if (!orders.length) {
+      return res.status(404).json({ message: "No orders found for the given email ID" });
+    }
+
+    res.status(200).json({ orders });
+  } catch (error) {
+    console.error("Error fetching orders:", error);
+    res.status(500).json({ error: "An error occurred while fetching orders" });
+  }
+};
+

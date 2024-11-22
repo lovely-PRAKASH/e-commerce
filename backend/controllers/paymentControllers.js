@@ -12,7 +12,7 @@ exports.createPayment = async (req, res) => {
         // Construct line items for Stripe payment
         const lineItems = CartItems.map(cartItem => {
             // Fallback URL in case image is missing or invalid
-            const productImage = cartItem.product.images?.[0]?.image || 'https://via.placeholder.com/150';
+            const productImage = 'https://via.placeholder.com/150'; //cartItem.product.images?.[0]?.image || 'https://via.placeholder.com/150'
 
             return {
                 price_data: {

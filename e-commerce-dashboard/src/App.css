@@ -895,6 +895,33 @@ position: sticky;
   outline: none;
   text-align: center;
 }
+
+.ProductQuantityDrop{
+  width: 130px;
+  gap: 5px;
+  overflow: hidden;
+}
+.ProductQuantityDrop Button{
+  outline: none !important;
+  min-width: 20px !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 20px !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0,0.1) !important;
+  color: #000;
+}
+.ProductQuantityDrop Button svg{
+  color:#000 !important;
+  font-size: 10px;
+}
+.ProductQuantityDrop input{
+  width:30px;
+  border: 0px;
+  background: transparent;
+  outline: none;
+  text-align: center;
+}
 /* cart style */
 
 .container {

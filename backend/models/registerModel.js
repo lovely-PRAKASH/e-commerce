@@ -15,7 +15,7 @@ const registerSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true,'please enter password'],
-    maxlength:[7,'passwod cannot exceed more than 7 characters']
+    maxlength:[7,'password cannot exceed more than 7 characters']
   },
   avatar:{
     type:String,

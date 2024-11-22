@@ -10,7 +10,7 @@ import Badge from "@mui/material/Badge";
 import SearchBox from "./SearchBox/SearchBox";
 import { myContext } from "../../App.jsx";
 import { IoMdSunny } from "react-icons/io";
-import { BsMoonStarsFill } from "react-icons/bs";
+import { HiOutlineMoon } from "react-icons/hi2";
 
 function Header({ cartItems, setMode, mode }) {
   const { countryList, dollerToRupees = 61.06 } = useContext(myContext);
@@ -52,7 +52,10 @@ function Header({ cartItems, setMode, mode }) {
     navigate("/dashboard");
     handleClose();
   }
-
+  const handleOrders=()=>{
+    navigate("/orders");
+    handleClose();
+  }
   return (
 <div className="headerWrapper">
   <div className="top-strip bg-blue py-2">
@@ -99,6 +102,7 @@ function Header({ cartItems, setMode, mode }) {
               >
                 <MenuItem onClick={handleDshboard}>Dashboard</MenuItem>
                   <MenuItem onClick={handleProfile}>Profile</MenuItem>
+                  <MenuItem onClick={handleOrders}>Your Orders</MenuItem>
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
 
@@ -127,7 +131,7 @@ function Header({ cartItems, setMode, mode }) {
                       onChange={() => setMode(mode === "light" ? "dark" : "light")}
                     >
                       <Checkbox
-                        icon={<BsMoonStarsFill className="moonSvg" />}
+                        icon={<HiOutlineMoon className="moonSvg" />}
                         checkedIcon={<IoMdSunny className="sunSvg" />}
                         checked={isNight}
                       />

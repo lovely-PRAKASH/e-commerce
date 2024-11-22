@@ -6,18 +6,19 @@ import axios from 'axios';
 
 const PaymentPage = () => {
   const location = useLocation();
-  const { cartItems, total, shippingInfo } = location.state;
-  
+  console.log(location);
+  const { cartItems, total, shippingInfo,} = location.state;
+
   const handlePayment = async () => {
     const stripe = await loadStripe('pk_test_51Q5PyvAQeC3Gz7CyXV3MTcjnalQm7gyVdhxi3om8s2e6ADPMboOEnIixBwrhrRW5bg02gKGwTW2cqcQHdTivyllX00QwPWxcLu');
-    
+
     try {
       // Step 1: Initiate payment request
       const response = await fetch(import.meta.env.VITE_API_URL + "/get-payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          CartItems:cartItems // Send cartItems as part of the payment request
+          CartItems: cartItems // Send cartItems as part of the payment request
         })
       });
 
@@ -56,7 +57,7 @@ const PaymentPage = () => {
   return (
     <div className="container mt-4">
       <h2 className="text-center">Review Your Order</h2>
-      
+
       {/* Display Cart Items */}
       <div className="cart-items-list table-responsive">
         <table className="table table-striped">
@@ -71,7 +72,13 @@ const PaymentPage = () => {
           <tbody>
             {cartItems.map((item) => (
               <tr key={item.product._id}>
-                <td>{item.product.name}</td>
+                <td>
+                  <img
+                    src={`/products/${item.product.images[0].image}`}
+                    alt={item.product.name}
+                    style={{ width: "50px", height: "50px" }}
+                  />                  
+                  {item.product.name}</td>
                 <td>₹{(item.product.price * 61.06).toFixed(2)}</td>
                 <td>{item.qty}</td>
                 <td>₹{(item.product.price * 61.06 * item.qty).toFixed(2)}</td>
@@ -86,8 +93,8 @@ const PaymentPage = () => {
         <h4 className="font-weight-bold">Total: ₹{total.toFixed(2)}</h4>
       </div>
 
-      <button 
-        onClick={handlePayment} 
+      <button
+        onClick={handlePayment}
         className="btn btn-success mt-4 w-100 font-weight-bold"
       >
         {`Pay ₹ ${total.toFixed(2)}`}

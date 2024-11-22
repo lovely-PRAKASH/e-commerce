@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const orderSchema = new mongoose.Schema({
   shippingInfo: {
     fullName: String,
+    email:String,
     address: String,
     city: String,
     state: String,
