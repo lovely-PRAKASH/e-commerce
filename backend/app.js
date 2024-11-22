@@ -16,7 +16,9 @@ const errorMiddleWare=require('./utils/middlewares/error')
 const payment=require("./routes/payment")
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  credentials:true,
+}));
 connectDatabase();
 app.use(express.static("../../assets/Profile"))
 app.use("/api/v1/", products);
@@ -30,4 +32,6 @@ app.listen(process.env.PORT, () => {
     `server is listining at port ${process.env.PORT} in ${process.env.NODE_ENV}`
   );
 });
+
+
 
