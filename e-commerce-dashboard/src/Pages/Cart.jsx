@@ -97,7 +97,7 @@ const Cart = ({ cartItems, setCartItems }) => {
 
   // Navigate to shipping details
   const placeOrderHandler = () => {
-    navigate("/shippingInfo", { state: { cartItems, total } });
+    navigate("/shippingInfo", { state: { cartItems, total} });
   };
 
   return cartItems.length > 0 ? (
@@ -120,7 +120,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                 <tr key={item.product._id}>
                   <td>
                     <img
-                      src={item.product.images[0].image}
+                      src={`/products/${item.product.images[0].image}`}
                       alt={item.product.name}
                       style={{ width: "50px", height: "50px" }}
                     />
