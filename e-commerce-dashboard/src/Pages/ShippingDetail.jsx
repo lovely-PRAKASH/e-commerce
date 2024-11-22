@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const ShippingDetail = () => {
   const [shippingInfo, setShippingInfo] = useState({
     fullName: "",
+    email:"",
     address: "",
     city: "",
     state: "",
@@ -46,6 +47,17 @@ const ShippingDetail = () => {
             type="text"
             name="fullName"
             value={shippingInfo.fullName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          {/*  */}
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={shippingInfo.email}
             onChange={handleChange}
             required
           />
