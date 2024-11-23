@@ -7,8 +7,10 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const email = "prakashslm27@gmail.com"; // Replace with actual logged-in user's email or get it from context/state
 
+  const user=JSON.parse(localStorage.getItem('user'))
+  const email = user?.email?String(user.email):"";
+console.log(email)
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -28,15 +30,15 @@ const Orders = () => {
   }, [email]); // This will only run when email changes
 
   if (loading) {
-    return <div className="d-flex justify-content-center">Loading...</div>;
+    return <div className="d-flex justify-content-center mt-5">Loading...</div>;
   }
 
   if (error) {
-    return <div className="d-flex justify-content-center text-danger">{error}</div>;
+    return <div className="d-flex justify-content-center text-danger mt-5">{error}</div>;
   }
 
   if (!orders.length) {
-    return <div className="d-flex justify-content-center">No orders found.</div>;
+    return <div className="d-flex justify-content-center mt-5">No orders found.</div>;
   }
 
   const handlePrint = (orderId) => {
@@ -52,6 +54,8 @@ const Orders = () => {
   };
 
   return (
+    <> 
+    {loading? <div className="d-flex justify-content-center">Loading...</div>:
     <div className="container mt-4">
       <h2 className="text-center mb-4">Your Orders</h2>
 
@@ -110,7 +114,8 @@ const Orders = () => {
           </div>
         );
       })}
-    </div>
+    </div>}
+    </>
   );
 };
 
