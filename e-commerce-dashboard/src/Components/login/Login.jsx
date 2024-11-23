@@ -16,6 +16,7 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
+    setError(""); 
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value,
@@ -40,14 +41,8 @@ console.log(credentials,'client data')
           setError("Login failed. Please check your credentials.");
         }
       })
-      .catch((err) => {
-        if (err.response && err.response.status === 401) {
-          setError("Invalid email or password");
-        } else if (err.response && err.response.status === 404) {
-          setError("User not found");
-        } else {
-          setError("An unexpected error occurred. Please try again.");
-        }
+      .catch((error) => {
+          setError(error.response?.data?.message || error.message);
       })
       .finally(() => {
         setLoading(false);
