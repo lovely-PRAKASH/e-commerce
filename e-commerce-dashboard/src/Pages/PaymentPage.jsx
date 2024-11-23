@@ -90,7 +90,7 @@ const PaymentPage = () => {
 
       {/* Display Total Amount */}
       <div className="total-amount mt-3 text-right">
-        <h4 className="font-weight-bold">Total: ₹{total.toFixed(2)}</h4>
+        <h4 className="font-weight-bold">Total + Tax: ₹{total.toFixed(2)}</h4>
       </div>
 
       <button

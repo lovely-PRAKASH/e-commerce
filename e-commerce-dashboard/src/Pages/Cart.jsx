@@ -97,7 +97,8 @@ const Cart = ({ cartItems, setCartItems }) => {
 
   // Navigate to shipping details
   const placeOrderHandler = () => {
-    navigate("/shippingInfo", { state: { cartItems, total} });
+    const totalWithTax=total+tax;
+    navigate("/shippingInfo", { state: { cartItems, total:totalWithTax} });
   };
 
   return cartItems.length > 0 ? (

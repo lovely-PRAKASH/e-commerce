@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NavBar from "./Navigation/NavBar"
 import logo from "../../assets/logo/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ import SearchBox from "./SearchBox/SearchBox";
 import { myContext } from "../../App.jsx";
 import { IoMdSunny } from "react-icons/io";
 import { HiOutlineMoon } from "react-icons/hi2";
+import axios from "axios";
 
 function Header({ cartItems, setMode, mode }) {
   const { countryList, dollerToRupees = 61.06 } = useContext(myContext);
@@ -18,12 +19,44 @@ function Header({ cartItems, setMode, mode }) {
   const navigate = useNavigate(); // Hook for navigation
   const location = useLocation();
   const [isNight, setIsNight] = useState();
+const [loading, setLoading]=useState(false);
+const [error, setError]=useState(null);
+const [userCheck, setUserCheck]=useState([])
+
   const showNavbar = location.pathname !== '/cart' && location.pathname !== '/profile' && location.pathname !== '/search';
   // const userName=JSON.parse(localStorage.getItem('user'))
   const totalAmount = cartItems.reduce(
     (acc, item) => acc + item.product.price * item.qty * dollerToRupees,
     0
   );
+
+  const user=JSON.parse(localStorage.getItem('user'))
+  const email = user?.email?String(user.email):""; 
+console.log(email)
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/checkadmin`,
+          { params: { email } }
+        );
+        setUserCheck(response.data.user);
+
+        setLoading(false);
+      } catch (err) {
+        setError(err.response?.data?.message || "Failed to fetch orders");
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, [email]);
+
+
+console.log("userdata",userCheck)
+        const role = userCheck && userCheck.length > 0 ? userCheck[0].role : null; // Safely access the role
+console.log(role); 
+// localStorage.setItem('user',JSON.stringify(userCheck))
 
   const handleClick = (event) => {
     setisOpen(event.currentTarget); // Open the menu when the user icon is clicked
@@ -48,7 +81,7 @@ function Header({ cartItems, setMode, mode }) {
     handleClose();
   };
 
-  const handleDshboard=()=>{
+  const handleDashboard=()=>{
     navigate("/dashboard");
     handleClose();
   }
@@ -100,7 +133,7 @@ function Header({ cartItems, setMode, mode }) {
                 anchorOrigin={{ vertical: "top", horizontal: "right" }}
                 transformOrigin={{ vertical: "top", horizontal: "right" }}
               >
-                <MenuItem onClick={handleDshboard}>Dashboard</MenuItem>
+               { role=="admin"&&<MenuItem onClick={handleDashboard}>Dashboard</MenuItem>}
                   <MenuItem onClick={handleProfile}>Profile</MenuItem>
                   <MenuItem onClick={handleOrders}>Your Orders</MenuItem>
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>

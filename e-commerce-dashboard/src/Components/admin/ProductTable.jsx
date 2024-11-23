@@ -88,7 +88,7 @@ function ProductTable() {
            <div className="d-flex justify-content-center" 
            style={{gap:5}}>
             <Link to="/dashboard"><p>Dashboard |</p></Link>
-            <Link to="/products"><p>Products |</p></Link>
+            {/* <Link to="/products"><p>Products |</p></Link> */}
             <Link to="/addproducts"><p>Add product |</p></Link>
             <Link to="/users"><p>Users</p></Link> 
            </div>

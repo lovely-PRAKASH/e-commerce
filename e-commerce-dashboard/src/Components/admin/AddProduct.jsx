@@ -89,9 +89,9 @@ console.log("images",productData.images)
         <Link to="/products">
           <p>Products |</p>
         </Link>
-        <Link to="/addproducts">
+        {/* <Link to="/addproducts">
           <p>Add product |</p>
-        </Link>
+        </Link> */}
         <Link to="/users">
           <p>Users</p>
         </Link>
