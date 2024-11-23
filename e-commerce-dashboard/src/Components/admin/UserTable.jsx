@@ -23,7 +23,7 @@ console.log(users)
             <Link to="/dashboard"><p>Dashboard |</p></Link>
             <Link to="/products"><p>Products |</p></Link>
             <Link to="/addproducts"><p>Add product |</p></Link>
-            <Link to="/users"><p>Users</p></Link> 
+            {/* <Link to="/users"><p>Users</p></Link>  */}
            </div>
             <h2 className="text-center mb-4">User List</h2>
             <div className="table-responsive">
