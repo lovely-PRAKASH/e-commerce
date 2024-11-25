@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Barcode from 'react-barcode';
-import html2pdf from "html2pdf.js";
+// @ts-nocheck
+import html2pdf from 'html2pdf.js';
+
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -43,9 +45,13 @@ console.log(email)
 
   const handlePrint = (orderId) => {
     const element = document.querySelector(`#invoice-${orderId}`);
+    if (!element) {
+      console.error(`Element with ID #invoice-${orderId} not found`);
+      return;
+    }  
     const options = {
       margin: 1,
-      filename: `invoice-${orderId}.pdf`,
+      filename: `invoice_${orderId}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
@@ -66,10 +72,10 @@ console.log(email)
         return (
           <div key={_id} className="order-invoice my-4 p-3 border">
             {/* Invoice to Print */}
-            <div id={`invoice_${_id}`} className="invoice-container">
+            <div id={`invoice-${_id}`} className="invoice-container">
               <div className="barcode d-flex justify-content-between align-items-center">
                 <h3>Order ID: {_id}</h3>
-                <Barcode value={_id} width={1} height={50} displayValue={false} />
+                <Barcode value={_id} width={1} height={50} displayValue={false}   renderer="img" />
               </div>
               <p><strong>Shipping Info:</strong></p>
               <p>{shippingInfo.fullName}</p>
