@@ -193,7 +193,7 @@ const currentOrders = orders.slice(indexOfFirstOrder, indexOfLastOrder);
                           {order.status}
                         </span>
                       </td>
-                      <td>₹ {order.totalAmount.toFixed(2)}</td>
+                      <td>{order.currencySymbol|| "₹"} {order.totalAmount.toFixed(2)}</td>
                       <td>
                         <button className="btn btn-sm btn-primary">View</button>
                       </td>
