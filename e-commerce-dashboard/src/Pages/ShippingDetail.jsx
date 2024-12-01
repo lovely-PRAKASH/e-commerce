@@ -31,6 +31,7 @@ const ShippingDetail = () => {
         cartItems:location.state.cartItems,
         total:location.state.total,
         shippingInfo:shippingInfo,
+        currencySymbol:location.state.currencySymbol
       }
     })
   };
