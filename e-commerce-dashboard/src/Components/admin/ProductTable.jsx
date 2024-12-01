@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { LiaGreaterThanSolid } from "react-icons/lia";
 
 function ProductTable() {
     const [products, setProducts] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 5;
 
     // Fetch products from API
     useEffect(() => {
@@ -24,6 +25,20 @@ function ProductTable() {
         };
         fetchProducts();
     }, []);
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) setCurrentPage(currentPage - 1);
+    };
 
     // Update product
     const handleUpdateProduct = async (id, updatedProduct) => {
@@ -85,13 +100,13 @@ function ProductTable() {
 
     return (
         <div className="container mt-4">
-           <div className="d-flex justify-content-center" 
-           style={{gap:5}}>
-            <Link to="/dashboard"><p>Dashboard |</p></Link>
-            {/* <Link to="/products"><p>Products |</p></Link> */}
-            <Link to="/addproducts"><p>Add product |</p></Link>
-            <Link to="/users"><p>Users</p></Link> 
-           </div>
+            <div className="d-flex justify-content-center"
+                style={{ gap: 5 }}>
+                <Link to="/dashboard"><p>Dashboard |</p></Link>
+                {/* <Link to="/products"><p>Products |</p></Link> */}
+                <Link to="/addproducts"><p>Add product |</p></Link>
+                <Link to="/users"><p>Users</p></Link>
+            </div>
             <h2 className="text-center mb-4">Product Management</h2>
             <div className="table-responsive">
                 <table className="table table-striped table-hover w-100">
@@ -109,9 +124,9 @@ function ProductTable() {
                         </tr>
                     </thead>
                     <tbody>
-                        {products.map((product, index) => (
+                        {currentProducts.map((product, index) => (
                             <tr key={product._id}>
-                                <td>{index + 1}</td>
+                                <td>{indexOfFirstProduct + index + 1}</td>
                                 <td>
                                     <img
                                         src={`/products/${product.images[0]?.image}`}
@@ -257,7 +272,7 @@ function ProductTable() {
                                         </button>
                                     )}
                                     <button
-                                        className="btn btn-sm btn-danger"
+                                        className="btn btn-sm btn-danger w-100"
                                         onClick={() => handleDeleteProduct(product._id)}
                                     >
                                         Delete
@@ -268,6 +283,24 @@ function ProductTable() {
                     </tbody>
                 </table>
             </div>
+            <div className="pagination-container d-flex justify-content-center align-items-center mt-4">
+                <button
+                    className="btn btn-primary mx-2"
+                    style={{borderRadius:"5px", cursor:"pointer"}}
+                    onClick={handlePrevPage}
+                    disabled={currentPage === 1}>
+                    Prev
+                </button>
+                <span>Page {currentPage} of {totalPages}</span>
+                <button
+                    className="btn btn-primary mx-2"
+                    style={{borderRadius:"5px", cursor:"pointer"}}
+                    onClick={handleNextPage}
+                    disabled={currentPage === totalPages}>
+                    Next
+                </button>
+            </div>
+
         </div>
     );
 }

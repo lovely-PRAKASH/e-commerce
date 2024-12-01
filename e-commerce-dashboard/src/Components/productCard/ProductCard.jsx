@@ -10,7 +10,7 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const ProductCard = ({ product, expanded = false }) => {
   const [isOpenProductModel, setIsOpenProductModel] = useState(false);
-  const { cartItems, setCartItems, dollerToRupees = 61.06 } = useContext(myContext);
+  const { cartItems, setCartItems, convertedRate, currencySymbol } = useContext(myContext);
   const [isFavorite, setIsFavorite] = useState(false);
   const [qty, setQty] = useState(1); // Initialize quantity
 
@@ -100,10 +100,10 @@ const ProductCard = ({ product, expanded = false }) => {
           </div>
           <div className="price">
             <del className="oldPrice">
-              ₹{Number(product?.price * dollerToRupees * 2).toFixed(2)}
+              {currencySymbol}&nbsp;{Number(product?.price * convertedRate * 2).toFixed(2)}
             </del>
             <span className="newPrice text-danger ml-1">
-              ₹{Number(product?.price * dollerToRupees).toFixed(2)}
+            {currencySymbol}&nbsp;{Number(product?.price * convertedRate).toFixed(2)}
             </span>
           </div>
           {expanded && (

@@ -4,6 +4,7 @@ import { FaHome, FaBox, FaShoppingCart, FaUsers, FaCog } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  
   const [orders, setOrders] = useState([]);
   const [totalSales, setTotalSales] = useState(0);
   const [totalOrders, setTotalOrders] = useState(0);

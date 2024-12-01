@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Barcode from 'react-barcode';
 // @ts-nocheck
 import html2pdf from 'html2pdf.js';
+import { myContext } from '../App';
 
 
 const Orders = () => {
@@ -67,7 +68,7 @@ console.log(email)
 
       {/* List of Orders */}
       {orders.map((order) => {
-        const { shippingInfo, cartItems, totalAmount, createdAt, _id } = order;
+        const { shippingInfo, cartItems, totalAmount, currencySymbol, convertedRate, createdAt, _id } = order;
 
         return (
           <div key={_id} className="order-invoice my-4 p-3 border">
@@ -101,9 +102,9 @@ console.log(email)
                   {cartItems.map((item) => (
                     <tr key={item.product._id}>
                       <td>{item.product.name}</td>
-                      <td>₹{(item.product.price * 61.06).toFixed(2)}</td>
+                      <td>{currencySymbol || "₹"}&nbsp;{(item.product.price * (convertedRate||61.06)).toFixed(2)}</td>
                       <td>{item.qty}</td>
-                      <td>₹{(item.product.price * item.qty * 61.06).toFixed(2)}</td>
+                      <td>{currencySymbol || "₹"}&nbsp;{(item.product.price * item.qty * (convertedRate||61.06)).toFixed(2)}</td>
                     </tr>
                   ))}
                 </tbody>

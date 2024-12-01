@@ -12,6 +12,8 @@ const orderSchema = new mongoose.Schema({
   },
   cartItems: Array,
   totalAmount: Number, // updated field name to match input
+  currencySymbol:String,
+  convertedRate:Number,
   paymentSessionId: String, // to store Stripe payment session ID
   status: {
     type: String,

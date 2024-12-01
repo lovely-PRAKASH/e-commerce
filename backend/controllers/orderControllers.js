@@ -4,7 +4,7 @@ const orderModel = require("../models/orderModel");
 exports.createOrders = async (req, res, next) => {
   try {
     console.log(req.body)
-    const { cartItems, shippingInfo, totalAmount, paymentSessionId } = req.body; // Destructure properties from req.body
+    const { cartItems, shippingInfo, totalAmount, paymentSessionId, currencySymbol,convertedRate } = req.body; // Destructure properties from req.body
 
     // Calculate the amount directly from the provided data, if required
     const amount = Number(
@@ -20,6 +20,8 @@ exports.createOrders = async (req, res, next) => {
       amount,
       shippingInfo,
       totalAmount,
+      currencySymbol,
+      convertedRate,
       paymentSessionId,
       status,
     });
