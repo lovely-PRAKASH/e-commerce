@@ -6,7 +6,7 @@ import { toast, Bounce } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 
 const Cart = ({ cartItems, setCartItems }) => {
-  const { dollerToRupees = 61.06 } = useContext(myContext);
+  const { convertedRate, currencySymbol} = useContext(myContext);
   const [complete, setComplete] = useState(false);
   const [tax, setTax] = useState(0);
   const [subtotal, setSubtotal] = useState(0);
@@ -32,12 +32,12 @@ const Cart = ({ cartItems, setCartItems }) => {
   useEffect(() => {
     const newSubtotal = cartItems.reduce((acc, item) => acc + item.qty, 0);
     const newTotal = cartItems.reduce(
-      (acc, item) => acc + item.product.price * item.qty * dollerToRupees,
+      (acc, item) => acc + item.product.price * item.qty * convertedRate,
       0
     );
     setSubtotal(newSubtotal);
     setTotal(newTotal);
-  }, [cartItems, dollerToRupees]);
+  }, [cartItems, convertedRate]);
 
   // Calculate tax based on total
   useEffect(() => {
@@ -98,7 +98,7 @@ const Cart = ({ cartItems, setCartItems }) => {
   // Navigate to shipping details
   const placeOrderHandler = () => {
     const totalWithTax=total+tax;
-    navigate("/shippingInfo", { state: { cartItems, total:totalWithTax} });
+    navigate("/shippingInfo", { state: { cartItems, total:totalWithTax, currencySymbol, convertedRate} });
   };
 
   return cartItems.length > 0 ? (
@@ -127,7 +127,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                     />
                     {item.product.name}
                   </td>
-                  <td>₹{(item.product.price * dollerToRupees).toFixed(2)}</td>
+                  <td>{currencySymbol}&nbsp;{(item.product.price * convertedRate).toFixed(2)}</td>
                   <td>
                     <div className="d-flex align-items-center">
                       <Button onClick={() => minus(item)}>-</Button>
@@ -142,7 +142,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                     </div>
                   </td>
                   <td>
-                    ₹{(item.product.price * dollerToRupees * item.qty).toFixed(2)}
+                  {currencySymbol}&nbsp;{(item.product.price * convertedRate * item.qty).toFixed(2)}
                   </td>
                   <td>
                     <Button
@@ -174,12 +174,12 @@ const Cart = ({ cartItems, setCartItems }) => {
             <hr />
             <div className="d-flex justify-content-between">
               <span>Tax Amount</span>
-              <span>₹ <strong>{tax.toFixed(2)}</strong></span>
+              <span>{currencySymbol}&nbsp;<strong>{tax.toFixed(2)}</strong></span>
             </div>
             <hr />
             <div className="d-flex justify-content-between">
               <span>Total (Order Amount)</span>
-              <span>₹ <strong>{(total + tax).toFixed(2)}</strong></span>
+              <span>{currencySymbol}&nbsp;<strong>{(total + tax).toFixed(2)}</strong></span>
             </div>
             <hr />
             <Button
