@@ -22,7 +22,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const ProductModel = ({ closeProductModel, product }) => {
   const zoomSliderBig = useRef();
   const zoomSlider = useRef();
-  const {cartItems, setCartItems, dollerToRupees=61.06} = useContext(myContext);
+  const {cartItems, setCartItems, convertedRate, currencySymbol} = useContext(myContext);
   const [qty, setqty] = useState(1);
 
 
@@ -203,11 +203,11 @@ const ProductModel = ({ closeProductModel, product }) => {
             <div className="d-flex align-items-center mb-3">
               <del className="oldPrice lg">
                 <span>
-                  ₹ {Number(product.price * dollerToRupees * 2).toFixed(2)}{" "}
+                {currencySymbol}&nbsp;{Number(product.price * convertedRate * 2).toFixed(2)}{" "}
                 </span>
               </del>
               <span className="newPrice lg text-danger ml-2">
-                ₹ {Number(product.price * dollerToRupees).toFixed(2)}
+              {currencySymbol}&nbsp;{Number(product.price * convertedRate).toFixed(2)}
               </span>
             </div>
             <span
