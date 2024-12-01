@@ -7,8 +7,8 @@ import axios from 'axios';
 const PaymentPage = () => {
   const location = useLocation();
   console.log(location);
-  const { cartItems, total, shippingInfo,} = location.state;
-
+  const { cartItems, total, shippingInfo,currencySymbol,convertedRate} = location.state;
+console.log("total",total)
   const handlePayment = async () => {
     const stripe = await loadStripe('pk_test_51Q5PyvAQeC3Gz7CyXV3MTcjnalQm7gyVdhxi3om8s2e6ADPMboOEnIixBwrhrRW5bg02gKGwTW2cqcQHdTivyllX00QwPWxcLu');
 
@@ -34,6 +34,8 @@ const PaymentPage = () => {
         shippingInfo,
         cartItems,
         totalAmount: total,
+        currencySymbol,
+        convertedRate,
         paymentSessionId: session.id // Store the session ID with the order
       }).then(response => {
         console.log("Order submission response:", response.data);
@@ -79,9 +81,9 @@ const PaymentPage = () => {
                     style={{ width: "50px", height: "50px" }}
                   />                  
                   {item.product.name}</td>
-                <td>₹{(item.product.price * 61.06).toFixed(2)}</td>
+                <td>{currencySymbol}&nbsp;{(item.product.price * 61.06).toFixed(2)}</td>
                 <td>{item.qty}</td>
-                <td>₹{(item.product.price * 61.06 * item.qty).toFixed(2)}</td>
+                <td>{currencySymbol}&nbsp;{(item.product.price * 61.06 * item.qty).toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
@@ -90,14 +92,14 @@ const PaymentPage = () => {
 
       {/* Display Total Amount */}
       <div className="total-amount mt-3 text-right">
-        <h4 className="font-weight-bold">Total + Tax: ₹{total.toFixed(2)}</h4>
+        <h4 className="font-weight-bold">Total + Tax: {currencySymbol}&nbsp;{total.toFixed(2)}</h4>
       </div>
 
       <button
         onClick={handlePayment}
         className="btn btn-success mt-4 w-100 font-weight-bold"
       >
-        {`Pay ₹ ${total.toFixed(2)}`}
+        {`Pay ${currencySymbol} ${total.toFixed(2)}`}
       </button>
     </div>
   );
