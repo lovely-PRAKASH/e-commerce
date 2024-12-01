@@ -11,6 +11,14 @@ function Dashboard() {
   const [pendingOrders, setPendingOrders] = useState(0);
   const [totalUsers, setTotalUsers] = useState(0);
 
+  const [currentPage, setCurrentPage] = useState(1);
+const ordersPerPage = 5; // Number of products per page
+
+
+const indexOfLastOrder = currentPage * ordersPerPage;
+const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
+const currentOrders = orders.slice(indexOfFirstOrder, indexOfLastOrder);
+
   const navigate=useNavigate();
   useEffect(() => {
     // Fetch Orders
@@ -58,6 +66,21 @@ function Dashboard() {
   const handleAddProduct=()=>{
     navigate("/addProducts")
   }
+
+  const totalPages = Math.ceil(orders.length / ordersPerPage);
+
+  const handleNextPage = () => {
+      if (currentPage < totalPages) {
+          setCurrentPage(currentPage + 1);
+      }
+  };
+  
+  const handlePrevPage = () => {
+      if (currentPage > 1) {
+          setCurrentPage(currentPage - 1);
+      }
+  };
+  
   return (
     <div className="container-fluid">
       <div className="row">
@@ -153,7 +176,7 @@ function Dashboard() {
               </thead>
               <tbody>
                 {orders.length > 0 ? (
-                  orders.map((order, index) => (
+                  currentOrders.map((order, index) => (
                     <tr key={order._id}>
                       <td>{index + 1}</td>
                       <td>{order._id}</td>
@@ -170,7 +193,7 @@ function Dashboard() {
                           {order.status}
                         </span>
                       </td>
-                      <td>₹ {order.totalAmount.toFixed(2)}</td>
+                      <td>{order.currencySymbol|| "₹"} {order.totalAmount.toFixed(2)}</td>
                       <td>
                         <button className="btn btn-sm btn-primary">View</button>
                       </td>
@@ -185,6 +208,22 @@ function Dashboard() {
                 )}
               </tbody>
             </table>
+            <div className="pagination-container d-flex justify-content-center mt-4">
+    <button 
+        className="btn btn-primary mx-2" 
+        onClick={handlePrevPage} 
+        disabled={currentPage === 1}>
+        Prev
+    </button>
+    <span>Page {currentPage} of {totalPages}</span>
+    <button 
+        className="btn btn-primary mx-2" 
+        onClick={handleNextPage} 
+        disabled={currentPage === totalPages}>
+        Next
+    </button>
+</div>
+
           </div>
         </main>
       </div>

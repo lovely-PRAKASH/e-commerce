@@ -116,11 +116,11 @@ const CountryDrop = () => {
         className="locationModel"
         TransitionComponent={Transition}
       >
-        <h6>Choose your Delivery Location</h6>
+        <h6>Choose your Country Currency</h6>
         <Button className="close_" onClick={() => setIsOpen(false)}>
           <IoMdClose />
         </Button>
-        <p>Enter your address and we will specify the offer for your area.</p>
+        <p>A list of <i>{countryList.length}</i> countries currencies given here</p>
 
         <div className="headerSearch w-100">
           <input
@@ -154,7 +154,7 @@ const CountryDrop = () => {
               </li>
             ))
           ) : (
-            <li>No countries found</li>
+            <li className="d-flex justify-content-center text-danger">No countries found</li>
           )}
         </ul>
       </Dialog>
