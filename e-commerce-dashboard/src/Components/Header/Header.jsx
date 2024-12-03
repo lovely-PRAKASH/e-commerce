@@ -62,9 +62,9 @@ function Header({ cartItems, setMode, mode }) {
 
 
   console.log("userdata", userCheck)
+  console.log("avatar", userCheck[0]?.avatar)
   const role = userCheck && userCheck.length > 0 ? userCheck[0].role : null; // Safely access the role
   console.log(role);
-  // localStorage.setItem('user',JSON.stringify(userCheck))
 
   const handleClick = (event) => {
     setisOpen(event.currentTarget); // Open the menu when the user icon is clicked
@@ -129,9 +129,13 @@ function Header({ cartItems, setMode, mode }) {
                 }
                 {/* Profile and Cart Section */}
                 <div className="profileCartWrapper part3 d-flex align-items-center">
-                  <Tooltip title="Profile" arrow placement="top">
-                    <Button className="circle mr-3 shadow" id="demo-positioned-menu" onClick={handleClick}>
-                      <FaRegUser />
+                  <Tooltip title={`${userCheck[0]?.username} profile`} arrow placement="top">
+                    <Button className="circle mr-3" id="demo-positioned-menu" onClick={handleClick}>
+                      {userCheck[0]?.avatar ?
+                        <img
+                          style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                          src={`./profile/${userCheck[0]?.avatar}`}
+                          alt="" /> : <FaRegUser />}
                     </Button>
                   </Tooltip>
                   <Menu
