@@ -193,13 +193,14 @@ body {
 
 header .part3 .circle{
   outline: none;
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
+  /* height: 40px; */
+  /* width: 40px; */
+  /* font-size: 25px; */
   /* color: #000; */
   align-items: center;
   /* border: 1px solid rgb(0, 0, 0,0.1); */
   border-radius: 50%;
+  padding: 0px;
 }
 header .part3 .circle svg{
   font-size: 22px;
