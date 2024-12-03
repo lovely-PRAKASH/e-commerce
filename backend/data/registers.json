@@ -1,0 +1,159 @@
+[{
+  "_id": {
+    "$oid": "66fe53c223a4049c6bbd0d1e"
+  },
+  "username": "prakash",
+  "email": "prakashslm27@gmail.com",
+  "password": "$2b$10$Vf38Dkmm4TZlSy86l99nquADSm8GT1CfYj.oWALgyTw/lEGaATZIm",
+  "avatar": "defaultProfile.jpg",
+  "createdAt": {
+    "$date": "2024-10-03T08:20:18.892Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66fe53f323a4049c6bbd0d20"
+  },
+  "username": "prakash",
+  "email": "lovelyprakash650@gmail.com",
+  "password": "$2b$10$knrGKk9qWLjI5DexhQE/GuUHqftdeJ1rErgVUGrcooXTYCzO3ttlK",
+  "avatar": "defaultProfile.jpg",
+  "createdAt": {
+    "$date": "2024-10-03T08:21:07.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ffd1788894e03d468931bd"
+  },
+  "username": "sowndharya",
+  "email": "sowndharyathangaraj07@gmail.com",
+  "password": "$2b$10$Zw7MNsMq958sxy4xjBqsKe12plo4XfmKldZ1dzFNNSSgbSs/0C7.i",
+  "avatar": "user123.png",
+  "createdAt": {
+    "$date": "2024-10-04T11:28:56.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6707eb8574ddaba2e6e9889a"
+  },
+  "username": "prakash",
+  "email": "pkint@gmail.com",
+  "password": "12",
+  "createdAt": {
+    "$date": "2024-10-10T14:58:13.569Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "671899a3c94c5ee000a7cc5a"
+  },
+  "username": "prakash",
+  "email": "prakashslm12@gmail.com",
+  "password": "1234567",
+  "createdAt": {
+    "$date": "2024-10-23T06:37:23.307Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "6718c7078ea9e6e61973bfc3"
+  },
+  "username": "pktoken",
+  "email": "pktoken@gmail.com",
+  "password": "1234567",
+  "createdAt": {
+    "$date": "2024-10-23T09:51:03.960Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "6718d39502951136daf3cafa"
+  },
+  "username": "pktoken",
+  "email": "pktoken2@gmail.com",
+  "password": "1234567",
+  "createdAt": {
+    "$date": "2024-10-23T10:44:37.650Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "6718d8fefc86a6567e94c175"
+  },
+  "username": "pktoken",
+  "email": "pktoken3@gmail.com",
+  "password": "1234567",
+  "createdAt": {
+    "$date": "2024-10-23T11:07:42.322Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "6719ed46b3bdffacf2261c6d"
+  },
+  "username": "frontlog",
+  "email": "frontlogtoken@gmail.com",
+  "password": "1234567",
+  "createdAt": {
+    "$date": "2024-10-24T06:46:30.671Z"
+  },
+  "__v": 0,
+  "avatar": "defaultProfile.jpg"
+},
+{
+  "_id": {
+    "$oid": "6740a730156c26f0f0b8fd68"
+  },
+  "username": "avatar check",
+  "email": "avatar@gmail.com",
+  "password": "$2b$10$pjJwKKezxt0BaiMYqsF1Dehrm0BOzAVV7F5Qu3tfmhQ4lfcffLMxu",
+  "avatar": "user123.png",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-11-22T15:45:52.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740a8ce156c26f0f0b903e2"
+  },
+  "username": "prakash Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$ly1pY.MGFJMK7yZ1YpKbB.S13KsKs/SsLuijoL.6r/BBHk36aCbNi",
+  "avatar": "adminProfile.jpg",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2024-11-22T15:52:46.113Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740ba5d492b561614bb7dc3"
+  },
+  "username": "tost",
+  "email": "tost@gmail.com",
+  "password": "$2b$10$j3REwBkRuOyXRgKLdf.eEujlDkTdOvvZgK/rn7OO4X.eRArc8fZhu",
+  "avatar": "user123.png",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-11-22T17:07:41.284Z"
+  },
+  "__v": 0
+}]
