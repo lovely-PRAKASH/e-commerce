@@ -82,7 +82,7 @@ function App() {
 
   useEffect(() => {
     if (countryList.length > 0) {
-      console.log("Processed Country List:", countryList);
+      // console.log("Processed Country List:", countryList);
     }
   }, [countryList]);
   
@@ -114,7 +114,7 @@ function App() {
       setCurrencySymbol("$")
     }
   };
-console.log("exchange rate",convertedRate);
+// console.log("exchange rate",convertedRate);
   const values = {
     countryList,
     cartItems,

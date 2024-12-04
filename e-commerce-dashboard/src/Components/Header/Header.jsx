@@ -40,7 +40,7 @@ function Header({ cartItems, setMode, mode }) {
 
   const user = JSON.parse(localStorage.getItem('user'))
   const email = user?.email ? String(user.email) : "";
-  console.log(email)
+  // console.log(email)
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -61,10 +61,10 @@ function Header({ cartItems, setMode, mode }) {
   }, [email]);
 
 
-  console.log("userdata", userCheck)
-  console.log("avatar", userCheck[0]?.avatar)
+  // console.log("userdata", userCheck)
+  // console.log("avatar", userCheck[0]?.avatar)
   const role = userCheck && userCheck.length > 0 ? userCheck[0].role : null; // Safely access the role
-  console.log(role);
+  // console.log(role);
 
   const handleClick = (event) => {
     setisOpen(event.currentTarget); // Open the menu when the user icon is clicked
