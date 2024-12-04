@@ -4,7 +4,6 @@ import banner from "../../src/assets/sideBanner.jpg";
 import banner2 from "../../src/assets/Banner2.jpg";
 import banner3 from "../../src/assets/Banner3.jpg";
 import banner4 from "../../src/assets/Banner4.jpg";
-
 import { Button, LinearProgress, CircularProgress } from "@mui/material";
 import { BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
