@@ -6,7 +6,7 @@ import axios from "axios";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import logo from '../../assets/logo/logo-removebg-preview.png'
+import logo from '/logo/logo-removebg-preview.png'
 import { toast } from "react-toastify";
 
 const Signup = () => {

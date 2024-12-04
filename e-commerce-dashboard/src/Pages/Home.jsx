@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import HomeBanner from "../Components/homeBanner/HomeBanner";
-import banner from "../../src/assets/sideBanner.jpg";
-import banner2 from "../../src/assets/Banner2.jpg";
-import banner3 from "../../src/assets/Banner3.jpg";
-import banner4 from "../../src/assets/Banner4.jpg";
+// import banner from "/images/sideBanner.jpg";
+// import banner2 from "/images/Banner2.jpg";
+// import banner3 from "/images/Banner3.jpg";
+// import banner4 from "/images/Banner4.jpg";
 import { Button, LinearProgress, CircularProgress } from "@mui/material";
 import { BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -65,16 +65,16 @@ function Home() {
               <div className="col-lg-3 col-md-4 mb-4 d-none d-md-block">
                 {/* Side Banners */}
                 <div className="banner mb-2">
-                  <img src={banner} alt="side banner" className="cursor w-100" />
+                  <img src="/images/sideBanner.jpg" alt="side banner" className="cursor w-100" />
                 </div>
                 <div className="banner mt-4 mb-3">
-                  <img src={banner2} alt="side banner" className="cursor w-100" />
+                  <img src="/images/banner2.jpg" alt="side banner" className="cursor w-100" />
                 </div>
                 <div className="banner">
-                  <img src={banner3} alt="side banner" className="cursor w-100" />
+                  <img src="/images/banner3.jpg" alt="side banner" className="cursor w-100" />
                 </div>
                 <div className="banner mt-4">
-                  <img src={banner4} alt="side banner" className="cursor w-100" />
+                  <img src="/images/banner4.jpg" alt="side banner" className="cursor w-100" />
                 </div>
               </div>
 

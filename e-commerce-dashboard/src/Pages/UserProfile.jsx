@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Avatar, TextField } from '@mui/material';
 import { FaEdit } from 'react-icons/fa';
 import { json } from 'react-router-dom';
-import defaultProfile from '../assets/Profile/defaultProfile.jpg'
+// import defaultProfile from '/Profile/defaultProfile.jpg'
 const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [user, setUser] = useState({});
@@ -35,7 +35,7 @@ useEffect(()=>{
   return (
     <div className="user-profile">
       <div className="profile-header">
-        <Avatar src={user.avatar || defaultProfile } alt={defaultProfile} className="profile-avatar" />
+        <Avatar src={user.avatar} alt={user.username} className="profile-avatar" />
         <h2>{user.name ||'UserName here'}</h2>
         <p>{user.email || 'user@123.com'}</p>
         <Button className='btn-secondary' startIcon={<FaEdit />} onClick={handleEditToggle}>
