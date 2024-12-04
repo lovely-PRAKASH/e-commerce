@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import NavBar from "./Navigation/NavBar"
-import logo from "../../assets/logo/logo.png";
+import logo from "/logo/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import CountryDrop from "../CountryDropDown/CountryDrop.jsx";
 import { Button, Checkbox, IconButton, Menu, MenuItem, Tooltip } from "@mui/material";
