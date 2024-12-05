@@ -4,8 +4,11 @@ const fs = require("fs");
 
 // Ensure the uploads/products directory exists
 const uploadPath = path.join(__dirname, 'uploads', 'products');
+console.log('Destination Path:', uploadPath);
 if (!fs.existsSync(uploadPath)) {
     fs.mkdirSync(uploadPath, { recursive: true });
+    console.log('Uploads directory created:', uploadPath);
+
 }
 
 // Configure Multer storage
@@ -15,6 +18,8 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
+        
+
     }
 });
 
