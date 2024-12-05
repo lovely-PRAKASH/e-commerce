@@ -20,7 +20,9 @@ app.use(cors({
   credentials:true,
 }));
 connectDatabase();
-app.use(express.static("../../assets/Profile"))
+// app.use(express.static("../../assets/Profile"))
+app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
+
 app.use("/api/v1/", products);
 app.use("/api/v1/", orders);
 app.use("/api/v1/", register);
