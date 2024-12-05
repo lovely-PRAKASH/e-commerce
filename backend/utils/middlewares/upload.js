@@ -1,11 +1,17 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 
+// Ensure the uploads/products directory exists
+const uploadPath = path.join(__dirname, 'uploads', 'products');
+if (!fs.existsSync(uploadPath)) {
+    fs.mkdirSync(uploadPath, { recursive: true });
+}
+
+// Configure Multer storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        let BASE_URL = `${req.protocol}://${req.get('host')}`
-
-        cb(null, `${BASE_URL}/uploads/products`);
+        cb(null, uploadPath); // Save files to the local 'uploads/products' directory
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
@@ -14,7 +20,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    limits: { fileSize: 2 * 1024 * 1024 },
+    limits: { fileSize: 2 * 1024 * 1024 }, // 2 MB file size limit
     fileFilter: function (req, file, cb) {
         const fileTypes = /jpg|jpeg|png/;
         const isMimeTypeValid = fileTypes.test(file.mimetype);
