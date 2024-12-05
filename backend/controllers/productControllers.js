@@ -104,6 +104,7 @@ exports.deleteProduct = async (req, res, next) => {
 exports.addProduct = async (req, res, next) => {
   try {
     console.log("server added data", req.body);
+
     const {
       name,
       price,
@@ -116,29 +117,35 @@ exports.addProduct = async (req, res, next) => {
       offers,
     } = req.body;
 
-    // console.log(req.files)
-    const images = req.files.map(file => ({image:file.filename})); // Access uploaded files
-// console.log(images);
+    // Generate the URLs for the uploaded images
+    const images = req.files.map((file) => ({
+      image: `${req.protocol}://${req.get('host')}/uploads/products/${file.filename}`,
+    }));
+
+    // Limit ratings to a maximum of 5
     const editedRating = ratings > 5 ? 5 : ratings;
 
+    // Save the product in the database
     const newProduct = await productModel.create({
       name,
       price,
       description,
       ratings: editedRating,
       count,
-      images,
+      images, // Save the image URLs in the database
       category,
       seller,
       stock,
       offers,
     });
 
+    // Send success response
     res.status(200).json({
       newProduct,
-      message: "product added successfully",
+      message: "Product added successfully",
     });
   } catch (error) {
+    // Handle errors
     res.status(400).json({
       message: error.message,
     });
