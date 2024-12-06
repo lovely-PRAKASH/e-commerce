@@ -17,6 +17,7 @@ const payment=require("./routes/payment")
 
 app.use(express.json());
 app.use(cors({
+  origin: 'https://go-cart-e-commerce.onrender.com',
   credentials:true,
 }));
 connectDatabase();
