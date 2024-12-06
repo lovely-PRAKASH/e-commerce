@@ -1,5 +1,7 @@
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET);
+const successUrl = process.env.SUCCESS_URL ;
+const cancelUrl = process.env.CANCEL_URL ;
 
 exports.createPayment = async (req, res) => {
     try {
@@ -31,8 +33,8 @@ exports.createPayment = async (req, res) => {
             payment_method_types: ['card'],
             line_items: lineItems,
             mode: 'payment',
-            success_url: 'http://localhost:5173/success',
-            cancel_url: 'http://localhost:5173/failure',
+            success_url: successUrl,
+            cancel_url: cancelUrl,
         });
 
         res.json({ id: session.id });
