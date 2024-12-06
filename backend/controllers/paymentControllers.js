@@ -31,8 +31,8 @@ exports.createPayment = async (req, res) => {
             payment_method_types: ['card'],
             line_items: lineItems,
             mode: 'payment',
-            success_url: 'https://go-cart-e-commerce.vercel.app/success',
-            cancel_url: 'https://go-cart-e-commerce.vercel.app/failure',
+            success_url: '/success',
+            cancel_url: '/failure',
         });
 
         res.json({ id: session.id });
