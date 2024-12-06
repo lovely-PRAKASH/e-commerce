@@ -31,8 +31,8 @@ exports.createPayment = async (req, res) => {
             payment_method_types: ['card'],
             line_items: lineItems,
             mode: 'payment',
-            success_url: '/success',
-            cancel_url: '/failure',
+            success_url: 'http://localhost:5173/success',
+            cancel_url: 'http://localhost:5173/failure',
         });
 
         res.json({ id: session.id });
