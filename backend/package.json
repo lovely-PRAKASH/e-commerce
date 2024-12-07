@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "set NODE_ENV=development&&nodemon app.js",
-    "prod": "set NODE_ENV=production&&nodemon app.js"
+    "prod": "set NODE_ENV=production&&nodemon app.js",
+    "seeder": "node utils/seeder.js"
   },
   "author": "",
   "license": "ISC",
