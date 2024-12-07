@@ -1,5 +1,5 @@
 const express = require("express");
-const upload= require("../utils/middlewares/upload")
+const upload= require("../middlewares/upload")
 const {
   getProduct,
   getSingleProduct,
