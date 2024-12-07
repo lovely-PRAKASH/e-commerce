@@ -117,9 +117,14 @@ exports.addProduct = async (req, res, next) => {
       offers,
     } = req.body;
 
+    let BASE_URL = process.env.BACKEND_URL;
+    console.log(BASE_URL);
+    if(process.env.NODE_ENV === "production"){
+        BASE_URL = `${req.protocol}://${req.get('host')}`
+    }
     // Generate the URLs for the uploaded images
     const images = req.files.map((file) => ({
-      image: `${req.protocol}://${req.get('host')}/uploads/products/${file.filename}`,
+      image: `${BASE_URL}/uploads/products/${file.filename}`,
     }));
 
     // Limit ratings to a maximum of 5
