@@ -1,6 +1,5 @@
 const productModel = require("../models/productModel");
 const multer = require('multer');
-const upload = multer({ dest: '../../e-commerce-dashboard/public/products' }); 
 
 // get product api-/api/v1/products/
 exports.getProduct = async (req, res, next) => {
