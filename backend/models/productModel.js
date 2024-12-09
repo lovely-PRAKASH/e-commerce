@@ -46,7 +46,7 @@ const productSchema = new mongoose.Schema({
 // Ensure default image if images array is empty
 productSchema.pre("save", function (next) {
   if (!this.images || this.images.length === 0) {
-    this.images = [{ image: "defaultImage.png" }];
+    this.images = [{ image: "/products/defaultImage.png" }];
   }
   next();
 });
