@@ -68,7 +68,7 @@ const ProductCard = ({ product, expanded = false }) => {
     <>
       <div className="productItem">
         <div className="imgwrapper">
-          <img src={`/products/${product?.images?.[0]?.image}`} 
+          <img src={`${product?.images?.[0]?.image}`} 
           // alt="No image found"
           // onerror="this.src='/products/defaultImage.jpg'"
           />

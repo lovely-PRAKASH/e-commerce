@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     getCountry("https://restcountries.com/v3.1/all");
-    getExchangeRate("https://api.currencyfreaks.com/latest?apikey=6194e7a49b2d49ecbc501912bc3b6abc");
+    getExchangeRate("https://api.currencyfreaks.com/latest?apikey=75c489e4f3c342b083ffcbe82f0623aa");
   }, []);
 
   const getCountry = async (url) => {
@@ -108,8 +108,8 @@ function App() {
       setConvertedRate(rates[countryCurrency]);
       setCurrencySymbol(selectedSymbol)
     } else {
-      console.warn("Conversion rate not found for countryCurrency, using base currency rate.");
-      alert("Conversion rate not found for countryCurrency, using base currency rate.")
+      console.warn("Conversion rate not found for countryCurrency, using USA currency rate.");
+      alert("Conversion rate not found for countryCurrency, using USA currency rate.")
       setConvertedRate(rates[base]);
       setCurrencySymbol("$")
     }
