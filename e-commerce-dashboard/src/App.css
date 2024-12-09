@@ -765,6 +765,9 @@ position: sticky;
 }
 .product_row .imgwrapper{
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .productItem .imgwrapper:hover .actions{
   opacity: 1;
