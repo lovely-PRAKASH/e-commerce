@@ -2,22 +2,22 @@
   "_id": {
     "$oid": "673ed1ba2bdc22c5f5f3ad16"
   },
-  "name": "OPPO F21s Pro 10G",
+  "name": "OPPO F21s Pro 8G",
   "price": 245.67,
-  "description": "OPPO F21s Pro 10G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
+  "description": "OPPO F21s Pro 8G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
   "ratings": 4.5,
   "count": 340,
   "images": [
     {
-      "image": "1.jpg",
+      "image": "/products/1.jpg",
       "_id": {
-        "$oid": "674c1703dc9cb35f7ea161b2"
+        "$oid": "6751d9a279b89151b4473c3c"
       }
     },
     {
-      "image": "1.jpg",
+      "image": "/products/1.jpg",
       "_id": {
-        "$oid": "674c1703dc9cb35f7ea161b3"
+        "$oid": "6751d9a279b89151b4473c3d"
       }
     }
   ],
@@ -40,7 +40,7 @@
   "count": 240,
   "images": [
     {
-      "image": "2.jpg"
+      "image": "/products/2.jpg"
     }
   ],
   "category": "Accessories",
@@ -59,7 +59,7 @@
   "count": 220,
   "images": [
     {
-      "image": "3.jpg"
+      "image": "/products/3.jpg"
     }
   ],
   "category": "Laptops",
@@ -78,7 +78,7 @@
   "count": 200,
   "images": [
     {
-      "image": "6.jpg"
+      "image": "/products/6.jpg"
     }
   ],
   "category": "Laptops",
@@ -97,7 +97,7 @@
   "count": 100,
   "images": [
     {
-      "image": "7.jpg"
+      "image": "/products/7.jpg"
     }
   ],
   "category": "Laptops",
@@ -116,7 +116,7 @@
   "count": 150,
   "images": [
     {
-      "image": "4.jpg"
+      "image": "/products/4.jpg"
     }
   ],
   "category": "Headphones",
@@ -135,7 +135,7 @@
   "count": 450,
   "images": [
     {
-      "image": "5.jpg"
+      "image": "/products/5.jpg"
     }
   ],
   "category": "Sports",
@@ -154,7 +154,7 @@
   "category": "men's clothing",
   "images": [
     {
-      "image": "fijalraw.jpg"
+      "image": "/products/fijalraw.jpg"
     }
   ],
   "ratings": 3.9,
@@ -172,7 +172,7 @@
   "category": "men's clothing",
   "images": [
     {
-      "image": "Mens Casual Premium Slim Fit T-Shirts.jpg"
+      "image": "/products/Mens Casual Premium Slim Fit T-Shirts.jpg"
     }
   ],
   "ratings": 4.1,
@@ -190,7 +190,7 @@
   "category": "men's clothing",
   "images": [
     {
-      "image": "Mens Cotton Jacket.jpg"
+      "image": "/products/Mens Cotton Jacket.jpg"
     }
   ],
   "ratings": 4.7,
@@ -208,7 +208,7 @@
   "category": "men's clothing",
   "images": [
     {
-      "image": "Mens Casual Slim Fit.jpg"
+      "image": "/products/Mens Casual Slim Fit.jpg"
     }
   ],
   "ratings": 2.1,
@@ -226,7 +226,7 @@
   "category": "jewelery",
   "images": [
     {
-      "image": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet.jpg"
+      "image": "/products/John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet.jpg"
     }
   ],
   "ratings": 4.6,
@@ -244,7 +244,7 @@
   "category": "jewelery",
   "images": [
     {
-      "image": "Solid Gold Petite Micropave.jpg"
+      "image": "/products/Solid Gold Petite Micropave.jpg"
     }
   ],
   "ratings": 3.9,
@@ -262,7 +262,7 @@
   "category": "jewelery",
   "images": [
     {
-      "image": "White Gold Plated Princess.jpg"
+      "image": "/products/White Gold Plated Princess.jpg"
     }
   ],
   "ratings": 3,
@@ -280,7 +280,7 @@
   "category": "jewelery",
   "images": [
     {
-      "image": "Pierced Owl Rose Gold Plated Stainless Steel Double.jpg"
+      "image": "/products/Pierced Owl Rose Gold Plated Stainless Steel Double.jpg"
     }
   ],
   "ratings": 1.9,
@@ -298,7 +298,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "WD 2TB Elements Portable External Hard Drive - USB 3.jpg"
+      "image": "/products/WD 2TB Elements Portable External Hard Drive - USB 3.jpg"
     }
   ],
   "ratings": 3.3,
@@ -316,7 +316,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb.jpg"
+      "image": "/products/SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb.jpg"
     }
   ],
   "ratings": 2.9,
@@ -334,7 +334,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5.jpg"
+      "image": "/products/Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5.jpg"
     }
   ],
   "ratings": 4.8,
@@ -352,7 +352,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive.jpg"
+      "image": "/products/WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive.jpg"
     }
   ],
   "ratings": 4.8,
@@ -370,7 +370,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin.jpg"
+      "image": "/products/Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin.jpg"
     }
   ],
   "ratings": 2.9,
@@ -388,7 +388,7 @@
   "category": "electronics",
   "images": [
     {
-      "image": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor.jpg"
+      "image": "/products/Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor.jpg"
     }
   ],
   "ratings": 2.2,
@@ -406,7 +406,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats.jpg"
+      "image": "/products/BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats.jpg"
     }
   ],
   "ratings": 2.6,
@@ -424,7 +424,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket.jpg"
+      "image": "/products/Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket.jpg"
     }
   ],
   "ratings": 2.9,
@@ -442,7 +442,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "Rain Jacket Women Windbreaker Striped Climbing Raincoats.jpg"
+      "image": "/products/Rain Jacket Women Windbreaker Striped Climbing Raincoats.jpg"
     }
   ],
   "ratings": 3.8,
@@ -460,7 +460,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "MBJ Women's Solid Short Sleeve Boat Neck V.jpg"
+      "image": "/products/MBJ Women's Solid Short Sleeve Boat Neck V.jpg"
     }
   ],
   "ratings": 4.7,
@@ -478,7 +478,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "Opna Women's Short Sleeve Moisture.jpg"
+      "image": "/products/Opna Women's Short Sleeve Moisture.jpg"
     }
   ],
   "ratings": 4.5,
@@ -496,7 +496,7 @@
   "category": "women's clothing",
   "images": [
     {
-      "image": "DANVOUY Womens T Shirt Casual Cotton Short.jpg"
+      "image": "/products/DANVOUY Womens T Shirt Casual Cotton Short.jpg"
     }
   ],
   "ratings": 3.6,
@@ -514,7 +514,7 @@
   "count": 123,
   "images": [
     {
-      "image": "defaultImage.png",
+      "image": "/products/defaultImage.png",
       "_id": {
         "$oid": "673edfeca9f2c2b3f1fe229c"
       }
@@ -540,7 +540,7 @@
   "count": 123,
   "images": [
     {
-      "image": "defaultImage.png",
+      "image": "/products/defaultImage.png",
       "_id": {
         "$oid": "673ee0ce43f8e2a792bad2a7"
       }
@@ -552,6 +552,162 @@
   "offers": 80,
   "createdAt": {
     "$date": "2024-11-21T07:27:10.702Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6751521d1ed6b89057dc57ba"
+  },
+  "name": "new product 1",
+  "price": 123,
+  "description": "new product 1",
+  "ratings": 4.5,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://go-cart-e-commerce-backend.onrender.com/uploads/products/images_1733382685228.jpg",
+      "_id": {
+        "$oid": "6751521d1ed6b89057dc57bb"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-05T07:11:25.497Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675319c2e237a6b8874bb35d"
+  },
+  "name": "Test2",
+  "price": 123,
+  "description": "test 2",
+  "ratings": 3.5,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://localhost:8000/uploads/products/images_1733499330037.jpg",
+      "_id": {
+        "$oid": "675319c2e237a6b8874bb35e"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-06T15:35:30.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67531e87778336d98851fc43"
+  },
+  "name": "Test3",
+  "price": 123,
+  "description": "test 3",
+  "ratings": 4.5,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://localhost:8000/uploads/products/images_1733500550890.jpg",
+      "_id": {
+        "$oid": "67531e87778336d98851fc44"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-06T15:55:51.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67531fad1d0a9e4459053f4a"
+  },
+  "name": "Test3",
+  "price": 123,
+  "description": "test3",
+  "ratings": 3.5,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://127.0.0.1:8000//uploads/products/images_1733500845414.jpg",
+      "_id": {
+        "$oid": "67531fad1d0a9e4459053f4b"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-06T16:00:45.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6753dd0d17180ceac157cd93"
+  },
+  "name": "Test2",
+  "price": 123,
+  "description": "twst2",
+  "ratings": 4,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://localhost:8000/uploads/products/images_1733549325756.jpg",
+      "_id": {
+        "$oid": "6753dd0d17180ceac157cd94"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-07T05:28:45.835Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6753e0421fb0b59b51a83cd5"
+  },
+  "name": "Test2",
+  "price": 123,
+  "description": "test2",
+  "ratings": 5,
+  "count": 123,
+  "images": [
+    {
+      "image": "http://localhost:8000/uploads/products/images_1733550146946.jpg",
+      "_id": {
+        "$oid": "6753e0431fb0b59b51a83cd6"
+      }
+    }
+  ],
+  "category": "Laptops",
+  "seller": "prakash.in",
+  "stock": 3,
+  "offers": 80,
+  "createdAt": {
+    "$date": "2024-12-07T05:42:27.009Z"
   },
   "__v": 0
 }]

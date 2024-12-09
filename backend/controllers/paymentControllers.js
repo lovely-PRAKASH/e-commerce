@@ -1,5 +1,7 @@
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET);
+const BASE_URL = process.env.FRONTEND_URL;
+
 
 exports.createPayment = async (req, res) => {
     try {
@@ -27,12 +29,20 @@ exports.createPayment = async (req, res) => {
             };
         });
 
+        if (process.env.NODE_ENV === "production") {
+            BASE_URL = `${req.protocol}://${req.get('host')}`; // Dynamically construct in production
+            console.log("Updated payment URL for Production:", BASE_URL);
+        }
+
+        const successUrl = `${BASE_URL}/success`;
+        const cancelUrl = `${BASE_URL}/cancel`;
+
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: lineItems,
             mode: 'payment',
-            success_url: 'http://localhost:5173/success',
-            cancel_url: 'http://localhost:5173/failure',
+            success_url: successUrl,
+            cancel_url: cancelUrl,
         });
 
         res.json({ id: session.id });
@@ -41,4 +51,3 @@ exports.createPayment = async (req, res) => {
         res.status(500).json({ message: "Payment creation failed" });
     }
 };
- 

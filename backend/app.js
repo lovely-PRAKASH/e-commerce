@@ -17,12 +17,14 @@ const payment=require("./routes/payment")
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://go-cart-e-commerce.onrender.com',
+  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+//   origin: 'https://go-cart-e-commerce.onrender.com',
+
   credentials:true,
 }));
 connectDatabase();
 // app.use(express.static("../../assets/Profile"))
-app.use('/addproduct', express.static(path.join(__dirname,'uploads') ) )
+app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
 
 app.use("/api/v1/", products);
 app.use("/api/v1/", orders);
@@ -30,6 +32,15 @@ app.use("/api/v1/", register);
 app.use("/api/v1/", login);
 app.use('/api/v1/', payment)
 // app.use(errorMiddleWare)
+
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, '../e-commerce-dashboard/dist')));
+  app.get('*', (req, res) =>{
+      res.sendFile(path.resolve(__dirname, '../e-commerce-dashboard/dist/index.html'))
+  })
+}
+
+
 app.listen(process.env.PORT, () => {
   console.log(
     `server is listining at port ${process.env.PORT} in ${process.env.NODE_ENV}`
