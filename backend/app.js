@@ -33,12 +33,12 @@ app.use("/api/v1/", login);
 app.use('/api/v1/', payment)
 // app.use(errorMiddleWare)
 
-if(process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, '../e-commerce-dashboard/dist')));
-  app.get('*', (req, res) =>{
-      res.sendFile(path.resolve(__dirname, '../e-commerce-dashboard/dist/index.html'))
-  })
-}
+// if(process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, '../e-commerce-dashboard/dist')));
+//   app.get('*', (req, res) =>{
+//       res.sendFile(path.resolve(__dirname, '../e-commerce-dashboard/dist/index.html'))
+//   })
+// }
 
 
 app.listen(process.env.PORT, () => {
